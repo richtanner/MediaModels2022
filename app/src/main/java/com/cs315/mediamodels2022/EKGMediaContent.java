@@ -20,11 +20,9 @@ public class EKGMediaContent {
 
 
     /**
-     * Create all those movie Strings we will be needing for the models
+     * Create all those game Strings we will be needing for the models
      */
     // CS315: DO THIS
-    // TODO: COPY this class to create your OWN MediaContent.  Then, create five NEW media objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
-
     private static final String hollowKnightTitle = "Hollow Knight";
     private static final String hollowKnightDescription = "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.";
     private static final String hollowKnightYear = "2017";
@@ -32,13 +30,13 @@ public class EKGMediaContent {
     private static final String hollowKnightWeblink = "https://store.steampowered.com/app/367520/Hollow_Knight/";
 
     private static final String rocketLeagueTitle = "Rocket League";
-    private static final String rocketLeagueDescription = "Download and compete in the high-octane hybrid of arcade-style soccer and vehicular mayhem! customize your car, hit the field, and compete in one of the most critically acclaimed sports games of all time! Download and take your shot!\n Hit the field by yourself or with friends in 1v1, 2v2, and 3v3 Online Modes, or enjoy Extra Modes like Rumble, Snow Day, or Hoops. Unlock items in Rocket Pass, climb the Competitive Ranks, compete in Competitive Tournaments, complete Challenges, enjoy cross-platform progression and more! The field is waiting. Take your shot!";
+    private static final String rocketLeagueDescription = "Download and compete in the high-octane hybrid of arcade-style soccer and vehicular mayhem! customize your car, hit the field, and compete in one of the most critically acclaimed sports games of all time! Download and take your shot! \n \nHit the field by yourself or with friends in 1v1, 2v2, and 3v3 Online Modes, or enjoy Extra Modes like Rumble, Snow Day, or Hoops. Unlock items in Rocket Pass, climb the Competitive Ranks, compete in Competitive Tournaments, complete Challenges, enjoy cross-platform progression and more! The field is waiting. Take your shot!";
     private static final String rocketLeagueYear = "2015";
     private static final String rocketLeagueImage = "rocketleagueimage";
     private static final String rocketLeagueWeblink = "https://www.rocketleague.com/";
 
     private static final String terrariaTitle = "Terraria";
-    private static final String terrariaDescription = "Dig, Fight, Explore, Build: The very world is at your fingertips as you fight for survival, fortune, and glory. Will you delve deep into cavernous expanses in search of treasure and raw materials with which to craft ever-evolving gear, machinery, and aesthetics? Perhaps you will choose instead to seek out ever-greater foes to test your mettle in combat? Maybe you will decide to construct your own city to house the host of mysterious allies you may encounter along your travels?\n" + "\n" + "In the World of Terraria, the choice is yours!\n" + "\n" + "Blending elements of classic action games with the freedom of sandbox-style creativity, Terraria is a unique gaming experience where both the journey and the destination are completely in the player’s control. The Terraria adventure is truly as unique as the players themselves!\n" + "\n" + "Are you up for the monumental task of exploring, creating, and defending a world of your own?";
+    private static final String terrariaDescription = "Dig, Fight, Explore, Build: The very world is at your fingertips as you fight for survival, fortune, and glory. Will you delve deep into cavernous expanses in search of treasure and raw materials with which to craft ever-evolving gear, machinery, and aesthetics? Perhaps you will choose instead to seek out ever-greater foes to test your mettle in combat? Maybe you will decide to construct your own city to house the host of mysterious allies you may encounter along your travels? \n \nIn the World of Terraria, the choice is yours!\n" + "\n" + "Blending elements of classic action games with the freedom of sandbox-style creativity, Terraria is a unique gaming experience where both the journey and the destination are completely in the player’s control. The Terraria adventure is truly as unique as the players themselves! \n \nAre you up for the monumental task of exploring, creating, and defending a world of your own?";
     private static final String terrariaYear = "2011";
     private static final String terrariaImage = "terrariaimage";
     private static final String terrariaWeblink = "https://store.steampowered.com/app/105600/Terraria/";

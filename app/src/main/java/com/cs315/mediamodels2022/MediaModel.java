@@ -10,8 +10,8 @@ public class MediaModel {
     private String mediaWeblink;
 
     /* initializer */
-    public MediaModel(final String movieTitle, final String mediaDescription, final String mediaYear, final String mediaImage, final String mediaWeblink) {
-        setMediaTitle(movieTitle);
+    public MediaModel(final String mediaTitle, final String mediaDescription, final String mediaYear, final String mediaImage, final String mediaWeblink) {
+        setMediaTitle(mediaTitle);
         setMediaDescription(mediaDescription);
         setMediaYear(mediaYear);
         setMediaImage(mediaImage);
