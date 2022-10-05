@@ -14,7 +14,6 @@ import com.cs315.mediamodels2022.databinding.ActivityItemDetailBinding;
 
 // CS315: NOTE: the primary purpose of this outer activity class is just to determine what size screen it is on and to layout it's fragments accordingly
 //  Nothing to do in here.
-// TODO: Make sure you give the app a new ICON!
 
 
 public class ItemDetailHostActivity extends AppCompatActivity {

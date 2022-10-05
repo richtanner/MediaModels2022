@@ -23,6 +23,7 @@ public class EKGMediaContent {
      * Create all those game Strings we will be needing for the models
      */
     // CS315: DO THIS
+    // TODO: Set these all to strings in strings.xml
     private static final String hollowKnightTitle = "Hollow Knight";
     private static final String hollowKnightDescription = "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.";
     private static final String hollowKnightYear = "2017";

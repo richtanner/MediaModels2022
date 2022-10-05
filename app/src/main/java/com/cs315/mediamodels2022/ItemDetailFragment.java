@@ -126,7 +126,6 @@ public class ItemDetailFragment extends Fragment {
                     {
 
                         // CS315: DO THIS
-                        // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
                         Intent intent = new Intent(ItemDetailFragment.this.getContext(), WebViewActivity.class);
                         URL = mediaItem.getMediaWeblink();
                         intent.putExtra("url", URL);
