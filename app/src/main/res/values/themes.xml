@@ -22,9 +22,9 @@
     <style name="Theme.MediaModels2022.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.MediaModels2022.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <style name="Theme.Splash" parent="Theme.SplashScreen">
-        <item name="android:postSplashScreenTheme">@style/Theme.App</item>
-        <item name="windowSplashScreenBackground">#FF27140F</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splashscreenevangrau</item>
-    </style>
+<!--    <style name="Theme.Splash" parent="Theme.SplashScreen">-->
+<!--        <item name="android:postSplashScreenTheme">@style/Theme.App</item>-->
+<!--        <item name="windowSplashScreenBackground">#FF27140F</item>-->
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/splashscreenevangrau</item>-->
+<!--    </style>-->
 </resources>

@@ -14,18 +14,11 @@ public class WebViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
 
-        WebView webby = findViewById(R.id.WebView);
-        webby.getSettings().setJavaScriptEnabled(true);
+        WebView web = (WebView) findViewById(R.id.WebView);
+        web.getSettings().setJavaScriptEnabled(true);
 
-        String url = String.valueOf(getIntent().getExtras());
-        openWebPage(url);
-    }
-
-    public void openWebPage(String url) {
-        Uri webpage = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
+        Bundle bundle = getIntent().getExtras();
+        String url = bundle.getString("url");
+        web.loadUrl(url);
     }
 }
