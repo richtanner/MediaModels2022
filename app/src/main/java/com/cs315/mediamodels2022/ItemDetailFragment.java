@@ -2,6 +2,7 @@ package com.cs315.mediamodels2022;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.DragEvent;
 
@@ -114,7 +115,8 @@ public class ItemDetailFragment extends Fragment {
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
                 String imageName = mediaItem.getMediaImage();
-                int imageId = getResources().getIdentifier("MediaModels2022:drawable/" + imageName, null, null);
+                //fix this
+                int imageId = getResources().getIdentifier(mediaItem.getMediaImage(), "drawable", getContext().getPackageName());
                 mediaImageView.setImageResource(imageId);
 
             }
