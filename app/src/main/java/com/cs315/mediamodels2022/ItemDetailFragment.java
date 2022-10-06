@@ -47,7 +47,7 @@ public class ItemDetailFragment extends Fragment {
     private final View.OnDragListener dragListener = (v, event) -> {
         if (event.getAction() == DragEvent.ACTION_DROP) {
             ClipData.Item clipDataItem = event.getClipData().getItemAt(0);
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = AnthonyMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             updateContent();
         }
         return true;
@@ -67,7 +67,7 @@ public class ItemDetailFragment extends Fragment {
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the MEDIA content specified by the fragment arguments.
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = AnthonyMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             // maybe set the title here?
         }
@@ -113,6 +113,9 @@ public class ItemDetailFragment extends Fragment {
 
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
+                String imageName = mediaItem.getMediaImage();
+                int imageId = getResources().getIdentifier("MediaModels2022:drawable/" + imageName, null, null);
+                mediaImageView.setImageResource(imageId);
 
             }
 
