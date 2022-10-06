@@ -25,29 +25,29 @@ public class AnthonyMediaContent {
     private static final String civImage1 = "america";
     private static final String civWebLink1 = "https://civilization.fandom.com/wiki/American_(Civ6)";
 
-    private static final String civName2 = "Generic Rom Com 1:";
-    private static final String civDesc2 = "";
-    private static final String civLeader2 = "2015";
-    private static final String civImage2 = "genericromcom";
-    private static final String civWebLink2 = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
+    private static final String civName2 = "Aztec";
+    private static final String civDesc2 = "The Aztec people represent a civilization in Civilization VI. They are led by Montezuma, under whom their default colors are cyan and dark red. They were added to Civilization VI in a free, separate pack that was released 90 days after the game's launch (as was the case with the Mongol civilization pack in Civilization V); during those 90 days, the Aztec civilization was available exclusively to players who had pre-ordered the game.";
+    private static final String civLeader2 = "Montezuma";
+    private static final String civImage2 = "aztec";
+    private static final String civWebLink2 = "https://civilization.fandom.com/wiki/Aztec_(Civ6)";
 
-    private static final String civName3 = "Generic Rom Com 1:";
-    private static final String civDesc3 = "";
-    private static final String civLeader3 = "2015";
-    private static final String civImage3 = "genericromcom";
-    private static final String civWebLink3 = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
+    private static final String civName3 = "Babylon";
+    private static final String civDesc3 = "The Babylonian people represent a civilization in Civilization VI. They are led by Hammurabi, under whom their default colors are light and dark blue. They are available with the Babylon Pack, which was released on November 19, 2020.";
+    private static final String civLeader3 = "Hammurabi";
+    private static final String civImage3 = "babylon";
+    private static final String civWebLink3 = "https://civilization.fandom.com/wiki/Babylonian_(Civ6)";
 
-    private static final String civName4 = "Generic Rom Com 1:";
-    private static final String civDesc4 = "";
-    private static final String civLeader4 = "2015";
-    private static final String civImage4 = "genericromcom";
-    private static final String civWebLink4 = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
+    private static final String civName4 = "Japan";
+    private static final String civDesc4 = "The Japanese people represent a civilization in Civilization VI. They are led by Hojo Tokimune, under whom their default colors are white and dark red.";
+    private static final String civLeader4 = "Hojo Tokimune";
+    private static final String civImage4 = "japan";
+    private static final String civWebLink4 = "https://civilization.fandom.com/wiki/Japanese_(Civ6)";
 
-    private static final String civName5 = "Generic Rom Com 1:";
-    private static final String civDesc5 = "";
-    private static final String civLeader5 = "2015";
-    private static final String civImage5 = "genericromcom";
-    private static final String civWebLink5 = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
+    private static final String civName5 = "Mongolia";
+    private static final String civDesc5 = "The Mongolian people (or Mongols) represent a civilization in Civilization VI: Rise and Fall. They are led by Genghis Khan, under whom their default colors are dark red and orange; and (with New Frontier Pass) by Kublai Khan, under whom their default colors are reversed.";
+    private static final String civLeader5 = "Genghis Khan";
+    private static final String civImage5 = "mongolia";
+    private static final String civWebLink5 = "https://civilization.fandom.com/wiki/Mongolian_(Civ6)";
 
 
 
