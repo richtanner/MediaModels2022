@@ -1,6 +1,7 @@
 package com.cs315.mediamodels2022;
 
-import androidx.lifecycle.MediatorLiveData;
+import android.content.Context;
+import android.content.res.Resources;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,6 +9,10 @@ import java.util.List;
 import java.util.Map;
 
 public class EKGMediaContent {
+
+    Context context = this.context;
+    Resources r = context.getResources();
+
     /**
      * A map of the Game items, by ID (title).
      */
@@ -18,17 +23,16 @@ public class EKGMediaContent {
      */
     public static final List<MediaModel> GAMES = new ArrayList<MediaModel>();
 
-
     /**
      * Create all those game Strings we will be needing for the models
      */
     // CS315: DO THIS
-    // TODO: Set these all to strings in strings.xml
-    private static final String hollowKnightTitle = "Hollow Knight";
-    private static final String hollowKnightDescription = "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.";
-    private static final String hollowKnightYear = "2017";
-    private static final String hollowKnightImage = "hollowknightimage";
-    private static final String hollowKnightWeblink = "https://store.steampowered.com/app/367520/Hollow_Knight/";
+    // TODO: figure out method to get values from strings.xml
+    private final String hollowKnightTitle = r.getString(R.string.hollowKnightTitle);
+    private final String hollowKnightDescription = r.getString(R.string.hollowKnightDescription);
+    private final String hollowKnightYear = r.getString(R.string.hollowKnightYear);
+    private final String hollowKnightImage = r.getString(R.string.hollowKnightImage);
+    private final String hollowKnightWeblink = r.getString(R.string.hollowKnightWebLink);
 
     private static final String rocketLeagueTitle = "Rocket League";
     private static final String rocketLeagueDescription = "Download and compete in the high-octane hybrid of arcade-style soccer and vehicular mayhem! customize your car, hit the field, and compete in one of the most critically acclaimed sports games of all time! Download and take your shot! \n \nHit the field by yourself or with friends in 1v1, 2v2, and 3v3 Online Modes, or enjoy Extra Modes like Rumble, Snow Day, or Hoops. Unlock items in Rocket Pass, climb the Competitive Ranks, compete in Competitive Tournaments, complete Challenges, enjoy cross-platform progression and more! The field is waiting. Take your shot!";

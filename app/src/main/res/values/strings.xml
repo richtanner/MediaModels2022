@@ -1,4 +1,29 @@
 <resources>
     <string name="app_name">MediaModels2022</string>
     <string name="title_item_detail">Item Detail</string>
+    <string name="hollowKnightTitle">Hollow Knight</string>
+    <string name="hollowKnightDescription">Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.</string>
+    <string name="hollowKnightYear">2017</string>
+    <string name="hollowKnightImage">hollowknightimage</string>
+    <string name="hollowKnightWebLink">https://store.steampowered.com/app/367520/Hollow_Knight/</string>
+    <string name="rocketLeagueTitle">Rocket League</string>
+    <string name="rocketLeagueDescription">Download and compete in the high-octane hybrid of arcade-style soccer and vehicular mayhem! customize your car, hit the field, and compete in one of the most critically acclaimed sports games of all time! Download and take your shot! \n \nHit the field by yourself or with friends in 1v1, 2v2, and 3v3 Online Modes, or enjoy Extra Modes like Rumble, Snow Day, or Hoops. Unlock items in Rocket Pass, climb the Competitive Ranks, compete in Competitive Tournaments, complete Challenges, enjoy cross-platform progression and more! The field is waiting. Take your shot!</string>
+    <string name="rocketLeagueYear">2015</string>
+    <string name="rocketLeagueImage">rocketleagueimage</string>
+    <string name="rocketLeagueWebLink">https://www.rocketleague.com/</string>
+    <string name="terrariaTitle">Terraria</string>
+    <string name="terrariaDescription">Dig, Fight, Explore, Build: The very world is at your fingertips as you fight for survival, fortune, and glory. Will you delve deep into cavernous expanses in search of treasure and raw materials with which to craft ever-evolving gear, machinery, and aesthetics? Perhaps you will choose instead to seek out ever-greater foes to test your mettle in combat? Maybe you will decide to construct your own city to house the host of mysterious allies you may encounter along your travels? \n \nIn the World of Terraria, the choice is yours!\n</string>
+    <string name="terrariaYear">2011</string>
+    <string name="terrariaImage">terrariaimage</string>
+    <string name="terrariaWebLink">https://store.steampowered.com/app/105600/Terraria/</string>
+    <string name="mgrrTitle">Metal Gear Rising: Revengeance</string>
+    <string name="mgrrDescription">Developed by Kojima Productions and PlatinumGames, METAL GEAR RISING: REVENGEANCE takes the renowned METAL GEAR franchise into exciting new territory with an all-new action experience. The game seamlessly melds pure action and epic story-telling that surrounds Raiden – a child soldier transformed into a half-human, half-cyborg ninja who uses his High Frequency katana blade to cut through any thing that stands in his vengeful path!</string>
+    <string name="mgrrYear">2013</string>
+    <string name="mgrrImage">mgrrimage</string>
+    <string name="mgrrWebLink">https://store.steampowered.com/app/235460/METAL_GEAR_RISING_REVENGEANCE/</string>
+    <string name="amongUsTitle">Among Us</string>
+    <string name="amongUsDescription">Play with 4-15 player online or via local WiFi as you attempt to prepare your spaceship for departure, but beware as one or more random players among the Crew are Impostors bent on killing everyone!</string>
+    <string name="amongUsYear">2018</string>
+    <string name="amongUsImage">amongusimage</string>
+    <string name="amongUsWebLink">https://store.steampowered.com/app/945360/Among_Us/</string>
 </resources>
