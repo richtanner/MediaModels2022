@@ -4,11 +4,11 @@
     <string name="watch_list_banner">My Watchlist</string>
 
     <!-- Movie resources -->
-        <string-array name="movie_details_array">
-            <item name="movie_title">Title</item>
-            <item name="movie_description">Description</item>
-            <item name="movie_release_year">Release Date</item>
-            <item name="movie_poster">Poster Image</item>
-            <item name="movie_weblink">URL</item>
-        </string-array>
+    <string-array name="movie_details_array">
+        <item name="movie_title">Title</item>
+        <item name="movie_description">Description</item>
+        <item name="movie_release_year">Release Date</item>
+        <item name="movie_poster">Poster Image</item>
+        <item name="movie_weblink">URL</item>
+    </string-array>
 </resources>

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,6 +46,7 @@ public class ItemDetailFragment extends Fragment {
     private TextView mediaDetailTextView;
     private ImageView mediaImageView;
     private FloatingActionButton mediaFab;
+    private WebView webView;
 
     private final View.OnDragListener dragListener = (v, event) -> {
         if (event.getAction() == DragEvent.ACTION_DROP) {
@@ -110,17 +112,11 @@ public class ItemDetailFragment extends Fragment {
             if (mToolbarLayout != null)
             {
                 mToolbarLayout.setTitle(mediaItem.getMediaTitle());
-
             }
 
             if (mediaImageView != null)
             {
-
-                // CS315: DO THIS
-                // TODO: Set the image based upon the string we got stashed in getMovieImage()
                 mediaImageView.setImageResource(Integer.parseInt(mediaItem.getMediaImage()));
-
-
             }
 
             if (mediaFab != null)
@@ -129,14 +125,14 @@ public class ItemDetailFragment extends Fragment {
                     @Override
                     public void onClick(View view)
                     {
-
                         // CS315: DO THIS
                         // TODO: launch the webpage with the URL we got back from the model... also lose the snack-bar stuff
                         // TODO: hint - you need to establish a new intent and launch a new Activity
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
 
-                        Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
+                        AlexB_WebView_Activity webView_activity = new AlexB_WebView_Activity();
+
+                        webView = new WebView(webView_activity);
                     }
                 });
             }
