@@ -20,7 +20,7 @@ public class LoadWebPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_load_web_page);
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar2);
         Intent intent = getIntent();
         String message = intent.getStringExtra(ItemDetailFragment.WEBURL);
         web = (WebView) findViewById(R.id.webView);
