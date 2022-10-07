@@ -2,6 +2,7 @@ package com.cs315.mediamodels2022;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.DragEvent;
@@ -34,6 +35,7 @@ public class ItemDetailFragment extends Fragment {
      * We used the MediaTitle as our ID.
      */
     public static final String ARG_ITEM_ID = "item_id";
+    public static final String WEBURL = "nombre";
 
     /**
      * The Movie content this fragment is presenting.
@@ -132,7 +134,9 @@ public class ItemDetailFragment extends Fragment {
                         // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                         // TODO: hint - you need to establish a new intent and launch a new Activity
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
-
+                        Intent intent = new Intent(ItemDetailFragment.super.getActivity(), LoadWebPage.class);
+                        intent.putExtra(WEBURL, mediaItem.getMediaWeblink());
+                        startActivity(intent);
                         Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     }
