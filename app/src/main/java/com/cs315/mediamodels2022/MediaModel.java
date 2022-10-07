@@ -17,7 +17,6 @@ public class MediaModel {
         setMediaImage(mediaImage);
         setMediaWeblink(mediaWeblink);
     }
-
     /* getters */
     public String getMediaTitle() {
         return mediaTitle;
@@ -32,7 +31,7 @@ public class MediaModel {
     }
 
     public String getMediaImage() {
-        return mediaImage;
+        return mediaImage.toString();
     }
 
     public String getMediaWeblink() {

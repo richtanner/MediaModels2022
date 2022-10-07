@@ -7,7 +7,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/item_list"
-        android:name="com.cs315.mediamodels2022.ItemListFragment"
+        android:name="@string/watch_list_banner"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginStart="@dimen/container_margin"

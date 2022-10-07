@@ -2,9 +2,11 @@ package com.cs315.mediamodels2022;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.DragEvent;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -47,7 +49,8 @@ public class ItemDetailFragment extends Fragment {
     private final View.OnDragListener dragListener = (v, event) -> {
         if (event.getAction() == DragEvent.ACTION_DROP) {
             ClipData.Item clipDataItem = event.getClipData().getItemAt(0);
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            assert getArguments() != null;
+            mediaItem = AlexBMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             updateContent();
         }
         return true;
@@ -65,16 +68,17 @@ public class ItemDetailFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        assert getArguments() != null;
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the MEDIA content specified by the fragment arguments.
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = AlexBMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             // maybe set the title here?
         }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView( LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         binding = FragmentItemDetailBinding.inflate(inflater, container, false);
@@ -106,6 +110,7 @@ public class ItemDetailFragment extends Fragment {
             if (mToolbarLayout != null)
             {
                 mToolbarLayout.setTitle(mediaItem.getMediaTitle());
+
             }
 
             if (mediaImageView != null)
@@ -113,6 +118,8 @@ public class ItemDetailFragment extends Fragment {
 
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
+                mediaImageView.setImageResource(Integer.parseInt(mediaItem.getMediaImage()));
+
 
             }
 

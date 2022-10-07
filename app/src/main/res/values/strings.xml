@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">MediaModels2022</string>
     <string name="title_item_detail">Item Detail</string>
-    <string name="alexb_branch">String for a new branch</string>
+    <string name="watch_list_banner">My Watchlist</string>
+
+    <!-- Movie resources -->
+        <string-array name="movie_details_array">
+            <item name="movie_title">Title</item>
+            <item name="movie_description">Description</item>
+            <item name="movie_release_year">Release Date</item>
+            <item name="movie_poster">Poster Image</item>
+            <item name="movie_weblink">URL</item>
+        </string-array>
 </resources>
