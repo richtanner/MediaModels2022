@@ -1,18 +1,19 @@
 package com.cs315.mediamodels2022;
 
 import android.content.ClipData;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.cs315.mediamodels2022.databinding.FragmentItemDetailBinding;
@@ -25,8 +26,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
  * in two-pane mode (on larger screen devices) or self-contained
  * on handsets.
  */
-public class ItemDetailFragment extends Fragment {
-
+public class ItemDetailFragment extends Fragment implements View.OnClickListener {
     /**
      * The fragment argument representing the item ID that this fragment
      * represents.
@@ -34,7 +34,7 @@ public class ItemDetailFragment extends Fragment {
      * We used the MediaTitle as our ID.
      */
     public static final String ARG_ITEM_ID = "item_id";
-
+    public static final String URL = null;
     /**
      * The Movie content this fragment is presenting.
      */
@@ -44,7 +44,6 @@ public class ItemDetailFragment extends Fragment {
     private TextView mediaDetailTextView;
     private ImageView mediaImageView;
     private FloatingActionButton mediaFab;
-    private WebView webView;
 
     private final View.OnDragListener dragListener = (v, event) -> {
         if (event.getAction() == DragEvent.ACTION_DROP) {
@@ -68,17 +67,17 @@ public class ItemDetailFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Gets the mediaItem information from the map.
         assert getArguments() != null;
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the MEDIA content specified by the fragment arguments.
             mediaItem = AlexBMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
-
             // maybe set the title here?
         }
     }
 
     @Override
-    public View onCreateView( LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         binding = FragmentItemDetailBinding.inflate(inflater, container, false);
@@ -92,9 +91,10 @@ public class ItemDetailFragment extends Fragment {
         // Show the placeholder content as text in a TextView & in the toolbar if available.
         updateContent();
         rootView.setOnDragListener(dragListener);
+        mediaFab.setOnClickListener(this);
         return rootView;
     }
-
+    
     @Override
     public void onDestroyView() {
         super.onDestroyView();
@@ -116,25 +116,17 @@ public class ItemDetailFragment extends Fragment {
             {
                 mediaImageView.setImageResource(Integer.parseInt(mediaItem.getMediaImage()));
             }
-
-            if (mediaFab != null)
-            {
-                mediaFab.setOnClickListener(this::onClick);
+            
+            if (mediaFab != null){
+                mediaFab.setOnClickListener(this);
             }
         }
     }
-    private void onClick(View view) {
-// CS315: DO THIS
-// TODO: launch the webpage with the URL we got back from the model... also lose the snack-bar stuff
-// TODO: hint - you need to establish a new intent and launch a new Activity
-// TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
-        Context context = view.getContext();
-        Intent intent = new Intent(context, AlexB_WebView_Activity.class);
-        intent.putExtra("url", mediaItem.getMediaWeblink());
-        
-        ProgressBar progressBar = new ProgressBar(context);
-        progressBar.setVisibility(View.VISIBLE);
 
-        context.startActivity(intent);
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(getActivity(), AlexB_WebView_Activity.class);
+        intent.putExtra(URL, mediaItem.getMediaWeblink());
+        startActivity(intent);
     }
 }

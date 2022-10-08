@@ -42,7 +42,7 @@ public class ItemListFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         RecyclerView recyclerView = binding.itemList;
@@ -84,8 +84,9 @@ public class ItemListFragment extends Fragment {
             mItemDetailFragmentContainer = itemDetailFragmentContainer;
         }
 
+        @NonNull
         @Override
-        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
             ItemListContentBinding binding =
                     ItemListContentBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
@@ -117,7 +118,7 @@ public class ItemListFragment extends Fragment {
             return mediaValues.size();
         }       
 
-        class ViewHolder extends RecyclerView.ViewHolder {
+        static class ViewHolder extends RecyclerView.ViewHolder {
             final TextView mIdView;
             final TextView mContentView;
             public MediaModel mediaItem;

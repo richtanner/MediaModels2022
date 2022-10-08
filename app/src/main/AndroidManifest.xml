@@ -20,18 +20,6 @@
             android:exported="true"
             android:parentActivityName=".ItemDetailHostActivity"
             android:theme="@style/Theme.MediaModels2022.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:pathPrefix="/"
-                    android:scheme="http"
-                    android:host="TODO"
-                    tools:ignore="AppLinkUrlError" />
-            </intent-filter>
         </activity>
 
         <activity
