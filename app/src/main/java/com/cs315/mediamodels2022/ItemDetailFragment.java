@@ -1,21 +1,22 @@
 package com.cs315.mediamodels2022;
 
 import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.google.android.material.appbar.CollapsingToolbarLayout;
+import androidx.fragment.app.Fragment;
+
 import com.cs315.mediamodels2022.databinding.FragmentItemDetailBinding;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
@@ -66,8 +67,6 @@ public class ItemDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        webView.findViewById(R.id.webView_fragment);
 
         assert getArguments() != null;
         if (getArguments().containsKey(ARG_ITEM_ID)) {
@@ -120,22 +119,22 @@ public class ItemDetailFragment extends Fragment {
 
             if (mediaFab != null)
             {
-                mediaFab.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        // CS315: DO THIS
-                        // TODO: launch the webpage with the URL we got back from the model... also lose the snack-bar stuff
-                        // TODO: hint - you need to establish a new intent and launch a new Activity
-                        // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
-                        Intent intent = new Intent();
-                        intent.setAction(Intent.ACTION_VIEW);
-                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                        intent.setData(android.net.Uri.parse(mediaItem.getMediaWeblink()));
-                        startActivity(intent);
-                    }
-                
-                });
+                mediaFab.setOnClickListener(this::onClick);
             }
         }
+    }
+    private void onClick(View view) {
+// CS315: DO THIS
+// TODO: launch the webpage with the URL we got back from the model... also lose the snack-bar stuff
+// TODO: hint - you need to establish a new intent and launch a new Activity
+// TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
+        Context context = view.getContext();
+        Intent intent = new Intent(context, AlexB_WebView_Activity.class);
+        intent.putExtra("url", mediaItem.getMediaWeblink());
+        
+        ProgressBar progressBar = new ProgressBar(context);
+        progressBar.setVisibility(View.VISIBLE);
+
+        context.startActivity(intent);
     }
 }

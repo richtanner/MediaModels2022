@@ -30,7 +30,6 @@ public class AlexBMediaContent extends AppCompatActivity {
      * Create all those movie Strings we will be needing for the models
      */
     // CS315: DO THIS
-    // TODO: COPY this class to create your OWN MediaContent.  Then, create five NEW media objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
     private static final String movie1Title = "The Super Mario Bros. Movie";
     private static final String movie1Description = "A plumber named Mario travels through an underground labyrinth with his brother, Luigi, trying to save a captured princess. Feature film adaptation of the popular video game.";
     private static final String movie1Year = "2023";

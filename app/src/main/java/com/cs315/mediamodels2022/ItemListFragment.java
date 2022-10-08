@@ -1,23 +1,15 @@
 package com.cs315.mediamodels2022;
 
-import android.content.ClipData;
-import android.content.ClipDescription;
-import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.core.view.ViewCompat;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.cs315.mediamodels2022.databinding.FragmentItemListBinding;
 import com.cs315.mediamodels2022.databinding.ItemListContentBinding;
@@ -39,9 +31,6 @@ public class ItemListFragment extends Fragment {
 
     // I am setting up my model creator... again this is called "movieMaker" only because I am doing movies!  Call yours whatever makes sense!
     private static final AlexBMediaContent my_movie_list = new AlexBMediaContent();
-
-    // CS315: DO THIS
-    // TODO: After you create your OWN Model Creator, DELETE the reference to "ProfsExampleMediaContent" above and call your own!
 
 
     @Override
@@ -70,10 +59,8 @@ public class ItemListFragment extends Fragment {
             View itemDetailFragmentContainer
     ) {
 
-        // CS315: I am calling MY Media Creator and having it populate with the line below... obviously, change that out to YOUR thing
         my_movie_list.createMovieMagic();
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(
-                // TODO: After you create your OWN Model Creator, DELETE the reference to "movieMaker.MOVIES" below and call your own!
                 AlexBMediaContent.Movie_List,
                 itemDetailFragmentContainer
         ));
@@ -127,11 +114,8 @@ public class ItemListFragment extends Fragment {
 
         @Override
         public int getItemCount() {
-            // CS315: DO THIS
-            // TODO: BUG FIX - Figure out why our movie list gets re-added every time we come back to this Activity
-            // TODO: it could be in THIS class, OR in the DumbMovieContent class, or maybe even somewhere else?
             return mediaValues.size();
-        }
+        }       
 
         class ViewHolder extends RecyclerView.ViewHolder {
             final TextView mIdView;

@@ -28,6 +28,7 @@ public class ItemDetailHostActivity extends AppCompatActivity {
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment_item_detail);
+        assert navHostFragment != null;
         NavController navController = navHostFragment.getNavController();
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.
                 Builder(navController.getGraph())

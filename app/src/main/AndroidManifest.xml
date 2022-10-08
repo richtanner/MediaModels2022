@@ -17,26 +17,27 @@
 
         <activity
             android:name=".AlexB_WebView_Activity"
-            android:exported="false"
-            tools:ignore="AppLinkUrlError">
-
+            android:exported="true"
+            android:parentActivityName=".ItemDetailHostActivity"
+            android:theme="@style/Theme.MediaModels2022.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-                <!-- Include the host attribute if you want your app to respond
-                     only to URLs with your app's domain. -->
-                <data android:scheme="http"/>
+
                 <category android:name="android.intent.category.DEFAULT" />
-                <!-- The BROWSABLE category is required to get links from web pages. -->
                 <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:pathPrefix="/"
+                    android:scheme="http"
+                    android:host="TODO"
+                    tools:ignore="AppLinkUrlError" />
             </intent-filter>
-    </activity>
+        </activity>
 
         <activity
             android:name=".ItemDetailHostActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:resizeableActivity="true"
-            tools:targetApi="24">
+            android:resizeableActivity="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
