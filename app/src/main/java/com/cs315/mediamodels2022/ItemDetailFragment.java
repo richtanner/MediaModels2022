@@ -1,12 +1,10 @@
 package com.cs315.mediamodels2022;
 
-import android.app.Activity;
 import android.content.ClipData;
-import android.graphics.drawable.Drawable;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -19,7 +17,6 @@ import android.widget.TextView;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.cs315.mediamodels2022.databinding.FragmentItemDetailBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A fragment representing a single Item detail screen.
@@ -69,6 +66,8 @@ public class ItemDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        webView.findViewById(R.id.webView_fragment);
 
         assert getArguments() != null;
         if (getArguments().containsKey(ARG_ITEM_ID)) {
@@ -123,17 +122,18 @@ public class ItemDetailFragment extends Fragment {
             {
                 mediaFab.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         // CS315: DO THIS
                         // TODO: launch the webpage with the URL we got back from the model... also lose the snack-bar stuff
                         // TODO: hint - you need to establish a new intent and launch a new Activity
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
-
-                        AlexB_WebView_Activity webView_activity = new AlexB_WebView_Activity();
-
-                        webView = new WebView(webView_activity);
+                        Intent intent = new Intent();
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(android.net.Uri.parse(mediaItem.getMediaWeblink()));
+                        startActivity(intent);
                     }
+                
                 });
             }
         }

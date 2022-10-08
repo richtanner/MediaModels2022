@@ -1,29 +1,22 @@
-package com.cs315.mediamodels2022;
+package com.example.mediamodels2022;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class AlexB_WebView_Activity extends AppCompatActivity {
-
-   private MediaModel mediaItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alexb_webview);
+        setContentView(R.layout.activity_alex_b__web_view_);
 
-        openWebPage(mediaItem.getMediaWeblink());
+        WebView webView = findViewById(R.id.webView);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("https://www.youtube.com/watch?v=Z1xYQ4Wj0qg");
     }
-
-    public void openWebPage(String url) {
-        Uri webpage = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
-    }
-
 }
