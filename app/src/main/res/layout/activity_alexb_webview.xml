@@ -8,11 +8,37 @@
 
     <WebView
         android:id="@+id/alexb_webview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Progress bar -->
+        <ProgressBar
+            android:id="@+id/alexb_webview_progressbar"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|center|start|top|end"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDuration="6000"
+            android:indeterminateTint="#00BFA5"
+            android:indeterminateTintMode="multiply"
+            android:interpolator="@android:interpolator/accelerate_decelerate"
+            android:max="100"
+            android:minWidth="24dp"
+            android:minHeight="24dp"
+            android:padding="4dp"
+            android:progress="0"
+            android:visibility="visible" />
+    </WebView>
+
+    <!-- Progress Bar -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

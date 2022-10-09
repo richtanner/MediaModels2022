@@ -36,29 +36,29 @@ public class AlexBMediaContent extends AppCompatActivity {
     private static final String movie1Image = String.valueOf(R.drawable.api6nuaeb__93364);
     private static final String movie1Weblink = "https://www.imdb.com/title/tt6718170/?ref_=tt_mv_close";
 
-    private static final String movie2Title = "";
-    private static final String movie2Description = "";
-    private static final String movie2Year = "";
-    private static final String movie2Image = String.valueOf(R.drawable.api6nuaeb__93364);
-    private static final String movie2Weblink = "";
+    private static final String movie2Title = "Interstellar";
+    private static final String movie2Description = "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.";
+    private static final String movie2Year = "2014";
+    private static final String movie2Image = String.valueOf(R.drawable.interstellar);
+    private static final String movie2Weblink = "https://www.imdb.com/title/tt0816692/?ref_=nv_sr_srsg_0";
 
-    private static final String movie3Title = "";
-    private static final String movie3Description = "";
-    private static final String movie3Year = "";
-    private static final String movie3Image = "";
-    private static final String movie3Weblink = "";
+    private static final String movie3Title = "Sicario";
+    private static final String movie3Description = "An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.";
+    private static final String movie3Year = "2015";
+    private static final String movie3Image = String.valueOf(R.drawable.sicario);
+    private static final String movie3Weblink = "https://www.imdb.com/title/tt3397884/?ref_=nv_sr_srsg_0";
 
-    private static final String movie4Title = "";
-    private static final String movie4Description = "";
-    private static final String movie4Year = "";
-    private static final String movie4Image = "";
-    private static final String movie4Weblink = "";
+    private static final String movie4Title = "Hell or High Water";
+    private static final String movie4Description = "A divorced father and his ex-con older brother resort to a desperate scheme in order to save their family's ranch in West Texas.";
+    private static final String movie4Year = "2016";
+    private static final String movie4Image = String.valueOf(R.drawable.hellorhighwater);
+    private static final String movie4Weblink = "https://www.imdb.com/title/tt2582782/?ref_=nv_sr_srsg_0";
 
-    private static final String movie5Title = "";
-    private static final String movie5Description = "";
-    private static final String movie5Year = "";
-    private static final String movie5Image = "";
-    private static final String movie5Weblink = "";
+    private static final String movie5Title = "Heat";
+    private static final String movie5Description = "A group of high-end professional thieves start to feel the heat from the LAPD when they unknowingly leave a clue at their latest heist.";
+    private static final String movie5Year = "1995";
+    private static final String movie5Image = String.valueOf(R.drawable.heat);
+    private static final String movie5Weblink = "https://www.imdb.com/title/tt0113277/?ref_=nv_sr_srsg_0";
 
 
 

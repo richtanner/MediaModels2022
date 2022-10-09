@@ -34,6 +34,8 @@ public class ItemDetailFragment extends Fragment implements View.OnClickListener
      * We used the MediaTitle as our ID.
      */
     public static final String ARG_ITEM_ID = "item_id";
+
+    // Used to send the mediaItem weblink to webview activity.
     public static final String URL = null;
     /**
      * The Movie content this fragment is presenting.

@@ -17,9 +17,7 @@
 
         <activity
             android:name=".AlexB_WebView_Activity"
-            android:exported="true"
-            android:parentActivityName=".ItemDetailHostActivity"
-            android:theme="@style/Theme.MediaModels2022.NoActionBar">
+            android:parentActivityName=".ItemDetailHostActivity">
         </activity>
 
         <activity
