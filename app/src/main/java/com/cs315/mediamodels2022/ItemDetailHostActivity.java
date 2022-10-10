@@ -1,5 +1,7 @@
 package com.cs315.mediamodels2022;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,13 +21,9 @@ import com.cs315.mediamodels2022.databinding.ActivityItemDetailBinding;
 
 
 public class ItemDetailHostActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
-
         ActivityItemDetailBinding binding = ActivityItemDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 

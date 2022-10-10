@@ -37,8 +37,8 @@ public class ItemListFragment extends Fragment {
 
 
     // I am setting up my model creator... again this is called "movieMaker" only because I am doing movies!  Call yours whatever makes sense!
-    private static AnthonyMediaContent displayMaker = new AnthonyMediaContent();
-
+    //private static AnthonyMediaContent displayMaker = new AnthonyMediaContent();
+    private static AnthonyMediaContent displayMaker;
     // CS315: DO THIS
     // TODO: After you create your OWN Model Creator, DELETE the reference to "ProfsExampleMediaContent" above and call your own!
 
@@ -68,7 +68,7 @@ public class ItemListFragment extends Fragment {
             RecyclerView recyclerView,
             View itemDetailFragmentContainer
     ) {
-
+        displayMaker = new AnthonyMediaContent();
         // CS315: I am calling MY Media Creator and having it populate with the line below... obviously, change that out to YOUR thing
         displayMaker.generateCiv();
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(

@@ -87,6 +87,7 @@ public class ItemDetailFragment extends Fragment {
         mediaDetailTextView = binding.itemDetail;
         mediaImageView = rootView.findViewById(R.id.media_imageView);
         mediaFab = rootView.findViewById(R.id.fab);
+        mediaFab.setImageResource(R.drawable.app_icon);
 
         // Show the placeholder content as text in a TextView & in the toolbar if available.
         updateContent();
