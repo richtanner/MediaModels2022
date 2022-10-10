@@ -31,7 +31,8 @@ import java.util.List;
  * item details. On larger screens, the Navigation controller presents the list of items and
  * item details side-by-side using two vertical panes.
  */
-public class ItemListFragment extends Fragment {
+public class ItemListFragment extends Fragment
+{
 
     private FragmentItemListBinding binding;
 
@@ -44,7 +45,8 @@ public class ItemListFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
 
         binding = FragmentItemListBinding.inflate(inflater, container, false);
         return binding.getRoot();
@@ -52,7 +54,8 @@ public class ItemListFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState)
+    {
         super.onViewCreated(view, savedInstanceState);
 
         RecyclerView recyclerView = binding.itemList;
@@ -64,80 +67,90 @@ public class ItemListFragment extends Fragment {
         setupRecyclerView(recyclerView, itemDetailFragmentContainer);
     }
 
-    private void setupRecyclerView(
+    private void setupRecyclerView
+            (
             RecyclerView recyclerView,
             View itemDetailFragmentContainer
-    ) {
+            )
+    {
 
         // CS315: I am calling MY Media Creator and having it populate with the line below... obviously, change that out to YOUR thing
         movieMaker.createMovieMagic();
-        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(
+        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter
+                (
                 // TODO: After you create your OWN Model Creator, DELETE the reference to "movieMaker.MOVIES" below and call your own!
                 movieMaker.MOVIES,
                 itemDetailFragmentContainer
-        ));
+                ));
     }
 
     @Override
-    public void onDestroyView() {
+    public void onDestroyView()
+    {
         super.onDestroyView();
         binding = null;
     }
 
     public static class SimpleItemRecyclerViewAdapter
-            extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
-
+            extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder>
+    {
         private final List<MediaModel> mediaValues;
         private final View mItemDetailFragmentContainer;
 
-        SimpleItemRecyclerViewAdapter(List<MediaModel> items,
-                                      View itemDetailFragmentContainer) {
+        SimpleItemRecyclerViewAdapter(List<MediaModel> items, View itemDetailFragmentContainer)
+        {
             mediaValues = items;
             mItemDetailFragmentContainer = itemDetailFragmentContainer;
         }
 
         @Override
-        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
+        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+        {
             ItemListContentBinding binding =
                     ItemListContentBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
             return new ViewHolder(binding);
-
         }
 
         @Override
-        public void onBindViewHolder(final ViewHolder holder, int position) {
+        public void onBindViewHolder(final ViewHolder holder, int position)
+        {
             holder.mediaItem = mediaValues.get(position);
             holder.mIdView.setText(mediaValues.get(position).getMediaTitle());
             holder.mContentView.setText(mediaValues.get(position).getMediaYear());
 
             holder.itemView.setTag(mediaValues.get(position));
-            holder.itemView.setOnClickListener(itemView -> {
+            holder.itemView.setOnClickListener(itemView ->
+            {
                 Bundle arguments = new Bundle();
                 arguments.putString(ItemDetailFragment.ARG_ITEM_ID, mediaValues.get(position).getMediaTitle());
-                if (mItemDetailFragmentContainer != null) {
+                if (mItemDetailFragmentContainer != null)
+                {
                     Navigation.findNavController(mItemDetailFragmentContainer)
                             .navigate(R.id.fragment_item_detail, arguments);
-                } else {
+                } else
+                {
                     Navigation.findNavController(itemView).navigate(R.id.show_item_detail, arguments);
                 }
             });
         }
 
         @Override
-        public int getItemCount() {
+        public int getItemCount()
+        {
             // CS315: DO THIS
             // TODO: BUG FIX - Figure out why our movie list gets re-added every time we come back to this Activity
             // TODO: it could be in THIS class, OR in the DumbMovieContent class, or maybe even somewhere else?
             return mediaValues.size();
         }
 
-        class ViewHolder extends RecyclerView.ViewHolder {
+        class ViewHolder extends RecyclerView.ViewHolder
+        {
             final TextView mIdView;
             final TextView mContentView;
             public MediaModel mediaItem;
 
-            ViewHolder(ItemListContentBinding binding) {
+            ViewHolder(ItemListContentBinding binding)
+            {
                 super(binding.getRoot());
                 mIdView = binding.idText;
                 mContentView = binding.content;

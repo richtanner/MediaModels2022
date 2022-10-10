@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ProfsExampleMediaContent
+public class NCMMediaContent
 {
     /**
      * A map of the Movie items, by ID (title).
@@ -43,7 +43,6 @@ public class ProfsExampleMediaContent
      */
     public List<MediaModel> createMovieMagic ()
     {
-
         // make those movie objects
         MediaModel action = new MediaModel(actionTitle, actionDescription, actionYear, actionImage, actionWeblink);
         MediaModel romcom = new MediaModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);

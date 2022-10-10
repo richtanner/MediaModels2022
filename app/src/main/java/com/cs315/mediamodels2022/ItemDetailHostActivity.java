@@ -17,10 +17,12 @@ import com.cs315.mediamodels2022.databinding.ActivityItemDetailBinding;
 // TODO: Make sure you give the app a new ICON!
 
 
-public class ItemDetailHostActivity extends AppCompatActivity {
+public class ItemDetailHostActivity extends AppCompatActivity
+{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
         ActivityItemDetailBinding binding = ActivityItemDetailBinding.inflate(getLayoutInflater());
@@ -33,11 +35,12 @@ public class ItemDetailHostActivity extends AppCompatActivity {
                 Builder(navController.getGraph())
                 .build();
 
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
     }
 
     @Override
-    public boolean onSupportNavigateUp() {
+    public boolean onSupportNavigateUp()
+    {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_item_detail);
         return navController.navigateUp() || super.onSupportNavigateUp();
     }

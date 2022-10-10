@@ -1,6 +1,7 @@
 package com.cs315.mediamodels2022;
 
-public class MediaModel {
+public class MediaModel
+{
 
     // a generic MODEL (like a database schema) for a MEDIA object
     private String mediaTitle;  // we will use the mediaTitle as a primary key throughout our app, so this must be always unique!
@@ -10,7 +11,8 @@ public class MediaModel {
     private String mediaWeblink;
 
     /* initializer */
-    public MediaModel(final String movieTitle, final String mediaDescription, final String mediaYear, final String mediaImage, final String mediaWeblink) {
+    public MediaModel(final String movieTitle, final String mediaDescription, final String mediaYear, final String mediaImage, final String mediaWeblink)
+    {
         setMediaTitle(movieTitle);
         setMediaDescription(mediaDescription);
         setMediaYear(mediaYear);
@@ -44,7 +46,8 @@ public class MediaModel {
         this.mediaTitle = mediaTitle;
     }
 
-    public void setMediaDescription(final String mediaDescription) {
+    public void setMediaDescription(final String mediaDescription)
+    {
         this.mediaDescription = mediaDescription;
     }
 

@@ -24,7 +24,8 @@ import com.google.android.material.snackbar.Snackbar;
  * in two-pane mode (on larger screen devices) or self-contained
  * on handsets.
  */
-public class ItemDetailFragment extends Fragment {
+public class ItemDetailFragment extends Fragment
+{
 
     /**
      * The fragment argument representing the item ID that this fragment
@@ -44,8 +45,10 @@ public class ItemDetailFragment extends Fragment {
     private ImageView mediaImageView;
     private FloatingActionButton mediaFab;
 
-    private final View.OnDragListener dragListener = (v, event) -> {
-        if (event.getAction() == DragEvent.ACTION_DROP) {
+    private final View.OnDragListener dragListener = (v, event) ->
+    {
+        if (event.getAction() == DragEvent.ACTION_DROP)
+        {
             ClipData.Item clipDataItem = event.getClipData().getItemAt(0);
             mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             updateContent();
@@ -58,14 +61,18 @@ public class ItemDetailFragment extends Fragment {
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public ItemDetailFragment() {
+    public ItemDetailFragment()
+    {
+
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
-        if (getArguments().containsKey(ARG_ITEM_ID)) {
+        if (getArguments().containsKey(ARG_ITEM_ID))
+        {
             // Load the MEDIA content specified by the fragment arguments.
             mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
@@ -74,8 +81,8 @@ public class ItemDetailFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
 
         binding = FragmentItemDetailBinding.inflate(inflater, container, false);
         View rootView = binding.getRoot();
@@ -92,7 +99,8 @@ public class ItemDetailFragment extends Fragment {
     }
 
     @Override
-    public void onDestroyView() {
+    public void onDestroyView()
+    {
         super.onDestroyView();
         binding = null;
     }
@@ -118,19 +126,15 @@ public class ItemDetailFragment extends Fragment {
 
             if (mediaFab != null)
             {
-                mediaFab.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view)
-                    {
+                mediaFab.setOnClickListener(view -> {
 
-                        // CS315: DO THIS
-                        // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
-                        // TODO: hint - you need to establish a new intent and launch a new Activity
-                        // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
+                    // CS315: DO THIS
+                    // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
+                    // TODO: hint - you need to establish a new intent and launch a new Activity
+                    // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
 
-                        Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                    }
+                    Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
                 });
             }
         }
