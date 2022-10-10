@@ -1,5 +1,8 @@
 package com.cs315.mediamodels2022;
 
+import android.content.Context;
+import android.content.res.Resources;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,37 +20,40 @@ public class AnthonyMediaContent {
     // I am calling this MOVIES, because that's what I am putting in here.  You can call it GAMES, or BOOKS, or ANIME, or FAVORITE_CS_TEXTBOOKS, ...whatever
     public static final List<MediaModel> CONTENT = new ArrayList<MediaModel>();
 
+    Context context = this.context;
+    Resources res = context.getResources();
+
     // TODO: COPY this class to create your OWN MediaContent.  Then, create five NEW media objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
 
-    private static final String civName1 = "America";
-    private static final String civDesc1 = "The American people represent a civilization in Civilization VI. They are led by Teddy Roosevelt, under whom their default colors are dark blue and white. When led by Rough Rider Teddy, their default colors are red and white.";
-    private static final String civLeader1 = "Teddy Roosevelt";
-    private static final String civImage1 = "america";
-    private static final String civWebLink1 = "https://civilization.fandom.com/wiki/American_(Civ6)";
+    private final String civName1 = res.getString(R.string.civ_name_1);
+    private final String civDesc1 = res.getString(R.string.civ_desc_1);
+    private final String civLeader1 = res.getString(R.string.civ_leader_1);
+    private final String civImage1 = res.getString(R.string.civ_image_1);
+    private final String civWebLink1 = res.getString(R.string.civ_web_link_1);
 
-    private static final String civName2 = "Aztec";
-    private static final String civDesc2 = "The Aztec people represent a civilization in Civilization VI. They are led by Montezuma, under whom their default colors are cyan and dark red. They were added to Civilization VI in a free, separate pack that was released 90 days after the game's launch (as was the case with the Mongol civilization pack in Civilization V); during those 90 days, the Aztec civilization was available exclusively to players who had pre-ordered the game.";
-    private static final String civLeader2 = "Montezuma";
-    private static final String civImage2 = "aztec";
-    private static final String civWebLink2 = "https://civilization.fandom.com/wiki/Aztec_(Civ6)";
+    private final String civName2 = res.getString(R.string.civ_name_2);
+    private final String civDesc2 = res.getString(R.string.civ_desc_2);
+    private final String civLeader2 = res.getString(R.string.civ_leader_2);
+    private final String civImage2 = res.getString(R.string.civ_image_2);
+    private final String civWebLink2 = res.getString(R.string.civ_web_link_2);
 
-    private static final String civName3 = "Babylon";
-    private static final String civDesc3 = "The Babylonian people represent a civilization in Civilization VI. They are led by Hammurabi, under whom their default colors are light and dark blue. They are available with the Babylon Pack, which was released on November 19, 2020.";
-    private static final String civLeader3 = "Hammurabi";
-    private static final String civImage3 = "babylon";
-    private static final String civWebLink3 = "https://civilization.fandom.com/wiki/Babylonian_(Civ6)";
+    private final String civName3 = res.getString(R.string.civ_name_3);
+    private final String civDesc3 = res.getString(R.string.civ_desc_3);
+    private final String civLeader3 = res.getString(R.string.civ_leader_3);
+    private final String civImage3 = res.getString(R.string.civ_image_3);
+    private final String civWebLink3 = res.getString(R.string.civ_web_link_3);
 
-    private static final String civName4 = "Japan";
-    private static final String civDesc4 = "The Japanese people represent a civilization in Civilization VI. They are led by Hojo Tokimune, under whom their default colors are white and dark red.";
-    private static final String civLeader4 = "Hojo Tokimune";
-    private static final String civImage4 = "japan";
-    private static final String civWebLink4 = "https://civilization.fandom.com/wiki/Japanese_(Civ6)";
+    private final String civName4 = res.getString(R.string.civ_name_4);
+    private final String civDesc4 = res.getString(R.string.civ_desc_4);
+    private final String civLeader4 = res.getString(R.string.civ_leader_4);
+    private final String civImage4 = res.getString(R.string.civ_image_4);
+    private final String civWebLink4 = res.getString(R.string.civ_web_link_4);
 
-    private static final String civName5 = "Mongolia";
-    private static final String civDesc5 = "The Mongolian people (or Mongols) represent a civilization in Civilization VI: Rise and Fall. They are led by Genghis Khan, under whom their default colors are dark red and orange; and (with New Frontier Pass) by Kublai Khan, under whom their default colors are reversed.";
-    private static final String civLeader5 = "Genghis Khan";
-    private static final String civImage5 = "mongolia";
-    private static final String civWebLink5 = "https://civilization.fandom.com/wiki/Mongolian_(Civ6)";
+    private final String civName5 = res.getString(R.string.civ_name_5);
+    private final String civDesc5 = res.getString(R.string.civ_desc_5);
+    private final String civLeader5 = res.getString(R.string.civ_leader_5);
+    private final String civImage5 = res.getString(R.string.civ_image_5);
+    private final String civWebLink5 = res.getString(R.string.civ_web_link_5);
 
 
 

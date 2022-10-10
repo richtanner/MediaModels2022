@@ -27,7 +27,7 @@ public class SplashScreen extends AppCompatActivity {
         };
 
         // its trigger runnable after 4000 millisecond.
-        mHandler.postDelayed(mRunnable,4000);
+        mHandler.postDelayed(mRunnable,2000);
 
     }
 }

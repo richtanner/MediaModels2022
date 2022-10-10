@@ -1,4 +1,30 @@
 <resources>
     <string name="app_name">MediaModels2022</string>
     <string name="title_item_detail">Item Detail</string>
+    <string name="civ_name_1">America</string>
+    <string name="civ_desc_1">The American people represent a civilization in Civilization VI. They are led by Teddy Roosevelt, under whom their default colors are dark blue and white. When led by Rough Rider Teddy, their default colors are red and white.</string>
+    <string name="civ_leader_1">Teddy Roosevelt</string>
+    <string name="civ_image_1">america</string>
+    <string name="civ_web_link_1">https://civilization.fandom.com/wiki/American_(Civ6)</string>
+    <string name="civ_name_2">Aztec</string>
+    <string name="civ_desc_2">The Aztec people represent a civilization in Civilization VI. They are led by Montezuma, under whom their default colors are cyan and dark red. They were added to Civilization VI in a free, separate pack that was released 90 days after the game\'s launch (as was the case with the Mongol civilization pack in Civilization V); during those 90 days, the Aztec civilization was available exclusively to players who had pre-ordered the game.</string>
+    <string name="civ_leader_2">Montezuma</string>
+    <string name="civ_image_2">aztec</string>
+    <string name="civ_web_link_2">https://civilization.fandom.com/wiki/Aztec_(Civ6)</string>
+    <string name="civ_name_3">Babylon</string>
+    <string name="civ_desc_3">The Babylonian people represent a civilization in Civilization VI. They are led by Hammurabi, under whom their default colors are light and dark blue. They are available with the Babylon Pack, which was released on November 19, 2020.</string>
+    <string name="civ_leader_3">Hammurabi</string>
+    <string name="civ_image_3">babylon</string>
+    <string name="civ_web_link_3">https://civilization.fandom.com/wiki/Babylonian_(Civ6)</string>
+    <string name="civ_name_4">Japan</string>
+    <string name="civ_desc_4">The Japanese people represent a civilization in Civilization VI. They are led by Hojo Tokimune, under whom their default colors are white and dark red.</string>
+    <string name="civ_leader_4">Hojo Tokimune</string>
+    <string name="civ_image_4">japan</string>
+    <string name="civ_web_link_4">https://civilization.fandom.com/wiki/Japanese_(Civ6)</string>
+    <string name="civ_name_5">Mongolia</string>
+    <string name="civ_desc_5">The Mongolian people (or Mongols) represent a civilization in Civilization VI: Rise and Fall. They are led by Genghis Khan, under whom their default colors are dark red and orange; and (with New Frontier Pass) by Kublai Khan, under whom their default colors are reversed.</string>
+    <string name="civ_leader_5">Genghis Khan</string>
+    <string name="civ_image_5">mongolia</string>
+    <string name="civ_web_link_5">https://civilization.fandom.com/wiki/Mongolian_(Civ6)</string>
+
 </resources>
