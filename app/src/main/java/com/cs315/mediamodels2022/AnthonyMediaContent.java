@@ -67,7 +67,6 @@ public class AnthonyMediaContent{
      * Create and return an array of Movie items.  Duh!
      */
     public List<MediaModel> generateCiv () {
-
         // make those movie objects
         MediaModel civ1 = new MediaModel(civName1, civDesc1, civLeader1, civImage1, civWebLink1);
         MediaModel civ2 = new MediaModel(civName2, civDesc2, civLeader2, civImage2, civWebLink2);
@@ -75,7 +74,7 @@ public class AnthonyMediaContent{
         MediaModel civ4 = new MediaModel(civName4, civDesc4, civLeader4, civImage4, civWebLink4);
         MediaModel civ5 = new MediaModel(civName5, civDesc5, civLeader5, civImage5, civWebLink5);
 
-
+        CONTENT.clear();
         // add EACH movie object to our lists and maps
         addCivToList(civ1);
         addCivToList(civ2);

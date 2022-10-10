@@ -45,7 +45,6 @@ public class ItemListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         binding = FragmentItemListBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
@@ -54,7 +53,6 @@ public class ItemListFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         RecyclerView recyclerView = binding.itemList;
 
         // Leaving this not using view binding as it relies on if the view is visible the current
@@ -68,6 +66,7 @@ public class ItemListFragment extends Fragment {
             RecyclerView recyclerView,
             View itemDetailFragmentContainer
     ) {
+
         displayMaker = new AnthonyMediaContent();
         // CS315: I am calling MY Media Creator and having it populate with the line below... obviously, change that out to YOUR thing
         displayMaker.generateCiv();
@@ -87,7 +86,7 @@ public class ItemListFragment extends Fragment {
     public static class SimpleItemRecyclerViewAdapter
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
 
-        private final List<MediaModel> mediaValues;
+        private List<MediaModel> mediaValues;
         private final View mItemDetailFragmentContainer;
 
         SimpleItemRecyclerViewAdapter(List<MediaModel> items,
