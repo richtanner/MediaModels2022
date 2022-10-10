@@ -41,10 +41,8 @@ public class ItemListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         binding = FragmentItemListBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
 
     @Override
@@ -60,11 +58,7 @@ public class ItemListFragment extends Fragment {
         setupRecyclerView(recyclerView, itemDetailFragmentContainer);
     }
 
-    private void setupRecyclerView(
-            RecyclerView recyclerView,
-            View itemDetailFragmentContainer
-    ) {
-
+    private void setupRecyclerView(RecyclerView recyclerView, View itemDetailFragmentContainer) {
         gameMaker.createGameMagic();
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(
                 gameMaker.GAMES,
@@ -84,19 +78,16 @@ public class ItemListFragment extends Fragment {
         private final List<MediaModel> mediaValues;
         private final View mItemDetailFragmentContainer;
 
-        SimpleItemRecyclerViewAdapter(List<MediaModel> items,
-                                      View itemDetailFragmentContainer) {
+        SimpleItemRecyclerViewAdapter(List<MediaModel> items, View itemDetailFragmentContainer) {
             mediaValues = items;
             mItemDetailFragmentContainer = itemDetailFragmentContainer;
         }
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
             ItemListContentBinding binding =
                     ItemListContentBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
             return new ViewHolder(binding);
-
         }
 
         @Override

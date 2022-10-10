@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class EKGMediaContent {
 
-    Context context = this.context;
-    Resources r = context.getResources();
+    private final Context context = this.context;
+    private final Resources r = context.getResources();
 
     /**
      * A map of the Game items, by ID (title).
@@ -34,29 +34,29 @@ public class EKGMediaContent {
     private final String hollowKnightImage = r.getString(R.string.hollowKnightImage);
     private final String hollowKnightWeblink = r.getString(R.string.hollowKnightWebLink);
 
-    private static final String rocketLeagueTitle = "Rocket League";
-    private static final String rocketLeagueDescription = "Download and compete in the high-octane hybrid of arcade-style soccer and vehicular mayhem! customize your car, hit the field, and compete in one of the most critically acclaimed sports games of all time! Download and take your shot! \n \nHit the field by yourself or with friends in 1v1, 2v2, and 3v3 Online Modes, or enjoy Extra Modes like Rumble, Snow Day, or Hoops. Unlock items in Rocket Pass, climb the Competitive Ranks, compete in Competitive Tournaments, complete Challenges, enjoy cross-platform progression and more! The field is waiting. Take your shot!";
-    private static final String rocketLeagueYear = "2015";
-    private static final String rocketLeagueImage = "rocketleagueimage";
-    private static final String rocketLeagueWeblink = "https://www.rocketleague.com/";
+    private final String rocketLeagueTitle = r.getString(R.string.rocketLeagueTitle);
+    private final String rocketLeagueDescription = r.getString(R.string.rocketLeagueDescription);
+    private final String rocketLeagueYear = r.getString(R.string.rocketLeagueYear);
+    private final String rocketLeagueImage = r.getString(R.string.rocketLeagueImage);
+    private final String rocketLeagueWeblink = r.getString(R.string.rocketLeagueWebLink);
 
-    private static final String terrariaTitle = "Terraria";
-    private static final String terrariaDescription = "Dig, Fight, Explore, Build: The very world is at your fingertips as you fight for survival, fortune, and glory. Will you delve deep into cavernous expanses in search of treasure and raw materials with which to craft ever-evolving gear, machinery, and aesthetics? Perhaps you will choose instead to seek out ever-greater foes to test your mettle in combat? Maybe you will decide to construct your own city to house the host of mysterious allies you may encounter along your travels? \n \nIn the World of Terraria, the choice is yours!\n" + "\n" + "Blending elements of classic action games with the freedom of sandbox-style creativity, Terraria is a unique gaming experience where both the journey and the destination are completely in the player’s control. The Terraria adventure is truly as unique as the players themselves! \n \nAre you up for the monumental task of exploring, creating, and defending a world of your own?";
-    private static final String terrariaYear = "2011";
-    private static final String terrariaImage = "terrariaimage";
-    private static final String terrariaWeblink = "https://store.steampowered.com/app/105600/Terraria/";
+    private final String terrariaTitle = r.getString(R.string.terrariaTitle);
+    private final String terrariaDescription = r.getString(R.string.terrariaDescription);
+    private final String terrariaYear = r.getString(R.string.terrariaYear);
+    private final String terrariaImage = r.getString(R.string.terrariaImage);
+    private final String terrariaWeblink = r.getString(R.string.terrariaWebLink);
 
-    private static final String mgrrTitle = "Metal Gear Rising: Revengeance";
-    private static final String mgrrDescription = "Developed by Kojima Productions and PlatinumGames, METAL GEAR RISING: REVENGEANCE takes the renowned METAL GEAR franchise into exciting new territory with an all-new action experience. The game seamlessly melds pure action and epic story-telling that surrounds Raiden – a child soldier transformed into a half-human, half-cyborg ninja who uses his High Frequency katana blade to cut through any thing that stands in his vengeful path!";
-    private static final String mgrrYear = "2013";
-    private static final String mgrrImage = "mgrrimage";
-    private static final String mgrrWeblink = "https://store.steampowered.com/app/235460/METAL_GEAR_RISING_REVENGEANCE/";
+    private final String mgrrTitle = r.getString(R.string.mgrrTitle);
+    private final String mgrrDescription = r.getString(R.string.mgrrDescription);
+    private final String mgrrYear = r.getString(R.string.mgrrYear);
+    private final String mgrrImage = r.getString(R.string.mgrrImage);
+    private final String mgrrWeblink = r.getString(R.string.mgrrWebLink);
 
-    private static final String amongUsTitle = "Among Us";
-    private static final String amongUsDescription = "Play with 4-15 player online or via local WiFi as you attempt to prepare your spaceship for departure, but beware as one or more random players among the Crew are Impostors bent on killing everyone!";
-    private static final String amongUsYear = "2018";
-    private static final String amongUsImage = "amongusimage";
-    private static final String amongUsWeblink = "https://store.steampowered.com/app/945360/Among_Us/";
+    private final String amongUsTitle = r.getString(R.string.amongUsTitle);
+    private final String amongUsDescription = r.getString(R.string.amongUsDescription);
+    private final String amongUsYear = r.getString(R.string.amongUsYear);
+    private final String amongUsImage = r.getString(R.string.amongUsImage);
+    private final String amongUsWeblink = r.getString(R.string.amongUsWebLink);
 
 
     /**
