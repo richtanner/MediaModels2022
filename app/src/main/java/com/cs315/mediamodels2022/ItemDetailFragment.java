@@ -1,22 +1,20 @@
 package com.cs315.mediamodels2022;
 
-import android.app.Activity;
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.material.appbar.CollapsingToolbarLayout;
+import androidx.fragment.app.Fragment;
+
 import com.cs315.mediamodels2022.databinding.FragmentItemDetailBinding;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A fragment representing a single Item detail screen.
@@ -47,7 +45,7 @@ public class ItemDetailFragment extends Fragment {
     private final View.OnDragListener dragListener = (v, event) -> {
         if (event.getAction() == DragEvent.ACTION_DROP) {
             ClipData.Item clipDataItem = event.getClipData().getItemAt(0);
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = MRMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             updateContent();
         }
         return true;
@@ -67,7 +65,7 @@ public class ItemDetailFragment extends Fragment {
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the MEDIA content specified by the fragment arguments.
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = MRMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             // maybe set the title here?
         }
@@ -97,6 +95,8 @@ public class ItemDetailFragment extends Fragment {
         binding = null;
     }
 
+    private static String URL = "";
+
     private void updateContent()
     {
         if (mediaItem != null)
@@ -113,7 +113,8 @@ public class ItemDetailFragment extends Fragment {
 
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
-
+                int id = getResources().getIdentifier("com.cs315.mediamodels2022:drawable/" + mediaItem.getMediaImage(), null, null);
+                mediaImageView.setImageResource(id);
             }
 
             if (mediaFab != null)
@@ -128,8 +129,10 @@ public class ItemDetailFragment extends Fragment {
                         // TODO: hint - you need to establish a new intent and launch a new Activity
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
 
-                        Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
+                        Intent intent = new Intent(ItemDetailFragment.this.getContext(), WebPage.class);
+                        URL = mediaItem.getMediaWeblink();
+                        intent.putExtra("url", URL);
+                        startActivity(intent);
                     }
                 });
             }

@@ -1,4 +1,29 @@
 <resources>
     <string name="app_name">MediaModels2022</string>
     <string name="title_item_detail">Item Detail</string>
+<string name="fnv_name_1">NewCaliforniaRepublic</string>
+<string name="fnv_desc_1">TheNewCaliforniaRepublic(NCR)isapost-WarfederalrepublicfoundedinNewCaliforniain2189.ItiscomprisedoffivecontiguousstateslocatedinsouthernCalifornia,withadditionalterritorialholdingsinnorthernCalifornia,OregonandNevada.</string>
+<string name="fnv_leader_1">AaronKimball</string>
+<string name="fnv_image_1">NCR</string>
+<string name="fnv_web_link_1">https://fallout.fandom.com/wiki/New_California_Republic</string>
+<string name="fnv_name_2">Casar\'sLegion</string>
+<string name="fnv_desc_2">Caesar\'sLegion,alsoreferredtosimplyasTheLegion,isatotalitariandictatorshipfoundedin2247byEdward"Caesar"SallowandJoshuaGraham,builtontheconquestandenslavementoftribalsocietiesintheAmericansouthwest.</string>
+<string name="fnv_leader_2">Caesar</string>
+<string name="fnv_image_2">TheLegion</string>
+<string name="fnv_web_link_2">https://fallout.fandom.com/wiki/Caesar%27s_Legion</string>
+<string name="fnv_name_3">RobertHouse</string>
+<string name="fnv_desc_3">RobertEdwinHouseistheself-styledpresident,CEO,andsoleproprietoroftheNewVegasStripintheMojaveWastelandintheyear2281.PriortotheGreatWar,Housewasanever-alluring,reclusiveenigmatotheworldandaveritablecelebritywithvarioustabloidsandnewsarticlescoveringhiseverymoveinbusinessandprivatelife.</string>
+<string name="fnv_leader_3">Robert</string>
+<string name="fnv_image_3">House</string>
+<string name="fnv_web_link_3">https://fallout.fandom.com/wiki/Robert_House</string>
+<string name="fnv_name_4">YesMan</string>
+<string name="fnv_desc_4">YesManisanAIprogramthatservesasBenny\'sassistantandright-handmanin2281.HeisamodifiedPDQ-88bsecuritronwithauniquepersonality,servingasanintegralpartofBenny\'sschemetotakecontrolofNewVegas.</string>
+<string name="fnv_leader_4">Courier,Benny,orMr.House</string>
+<string name="fnv_image_4">YesMan</string>
+<string name="fnv_web_link_4">https://fallout.fandom.com/wiki/Yes_Man</string>
+<string name="fnv_name_5">Boomers</string>
+<string name="fnv_desc_5">TheBoomersareanisolationisttribeoccupyingtheNellisAirForceBaseintheMojaveWastelandin2281.</string>
+<string name="fnv_leader_5">Pearl</string>
+<string name="fnv_image_5">Boomers</string>
+<string name="fnv_web_link_5">https://fallout.fandom.com/wiki/Boomers</string>
 </resources>

@@ -5,15 +5,15 @@ public class MediaModel {
     // a generic MODEL (like a database schema) for a MEDIA object
     private String mediaTitle;  // we will use the mediaTitle as a primary key throughout our app, so this must be always unique!
     private String mediaDescription;
-    private String mediaYear;
+    private String mediaLeader;
     private String mediaImage;
     private String mediaWeblink;
 
     /* initializer */
-    public MediaModel(final String movieTitle, final String mediaDescription, final String mediaYear, final String mediaImage, final String mediaWeblink) {
+    public MediaModel(final String movieTitle, final String mediaDescription, final String mediaLeader, final String mediaImage, final String mediaWeblink) {
         setMediaTitle(movieTitle);
         setMediaDescription(mediaDescription);
-        setMediaYear(mediaYear);
+        setmediaLeader(mediaLeader);
         setMediaImage(mediaImage);
         setMediaWeblink(mediaWeblink);
     }
@@ -27,8 +27,8 @@ public class MediaModel {
         return mediaDescription;
     }
 
-    public String getMediaYear() {
-        return mediaYear;
+    public String getmediaLeader() {
+        return mediaLeader;
     }
 
     public String getMediaImage() {
@@ -48,8 +48,8 @@ public class MediaModel {
         this.mediaDescription = mediaDescription;
     }
 
-    public void setMediaYear(final String mediaYear) {
-        this.mediaYear = mediaYear;
+    public void setmediaLeader(final String mediaLeader) {
+        this.mediaLeader = mediaLeader;
     }
 
     public void setMediaImage(final String mediaImage) {
