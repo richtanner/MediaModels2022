@@ -15,14 +15,26 @@
         android:theme="@style/Theme.AppCompat"
         tools:targetApi="31">
         <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".LoadWebPage"
             android:exported="false"
             android:parentActivityName=".ItemDetailHostActivity">
             <meta-data
                 android:name="android.app.lib_name"
-                android:value=""/>
-<!--                android:name="android.support.PARENT_ACTIVITY"-->
-<!--                android:value=".ThirdActivity" />-->
+                android:value="" />
+            <!-- android:name="android.support.PARENT_ACTIVITY" -->
+            <!-- android:value=".ThirdActivity" /> -->
         </activity>
         <activity
             android:name=".ItemDetailHostActivity"
@@ -30,11 +42,11 @@
             android:label="@string/app_name"
             android:resizeableActivity="true"
             tools:targetApi="24">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
 
             <meta-data
                 android:name="android.app.lib_name"
