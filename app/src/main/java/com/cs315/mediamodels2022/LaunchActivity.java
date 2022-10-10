@@ -17,7 +17,7 @@ public class LaunchActivity extends AppCompatActivity {
 
         mHandler = new Handler();
         mRunnable = () -> {
-            Intent intent = new Intent(LaunchActivity.this,ItemListFragment.class);
+            Intent intent = new Intent(LaunchActivity.this,ItemDetailHostActivity.class);
             startActivity(intent);
             finish();
         };

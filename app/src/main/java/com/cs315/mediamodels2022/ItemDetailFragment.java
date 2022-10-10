@@ -71,6 +71,7 @@ public class ItemDetailFragment extends Fragment {
             mediaItem = EKGMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             // TODO: maybe set the title here?
+
         }
     }
 

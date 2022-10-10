@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class EKGMediaContent {
 
-    private final Context context = this.context;
+    private final Context context = App.getContext();
     private final Resources r = context.getResources();
 
     /**
@@ -27,7 +27,6 @@ public class EKGMediaContent {
      * Create all those game Strings we will be needing for the models
      */
     // CS315: DO THIS
-    // TODO: figure out method to get values from strings.xml
     private final String hollowKnightTitle = r.getString(R.string.hollowKnightTitle);
     private final String hollowKnightDescription = r.getString(R.string.hollowKnightDescription);
     private final String hollowKnightYear = r.getString(R.string.hollowKnightYear);
@@ -58,7 +57,6 @@ public class EKGMediaContent {
     private final String amongUsImage = r.getString(R.string.amongUsImage);
     private final String amongUsWeblink = r.getString(R.string.amongUsWebLink);
 
-
     /**
      * Create and return an array of Game items.  Duh!
      */
@@ -84,8 +82,11 @@ public class EKGMediaContent {
 
     // Internal helper so we don't forget any steps in the complex two-step system.  Seriously.  It happens.
     private void addGameToList (MediaModel game) {
-        GAMES.add(game);
-        ITEM_MAP.put(game.getMediaTitle(), game);
+        String title = game.getMediaTitle();
+        if (!(ITEM_MAP.containsKey(title))) {
+            GAMES.add(game);
+            ITEM_MAP.put(game.getMediaTitle(), game);
+        }
     }
 }
 
