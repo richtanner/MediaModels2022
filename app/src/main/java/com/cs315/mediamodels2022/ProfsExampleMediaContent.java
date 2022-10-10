@@ -36,6 +36,8 @@ public class ProfsExampleMediaContent {
     private static final String actionImage = "genericaction";
     private static final String actionWeblink = "http://www.denofgeek.com/us/movies/18824/the-5-most-common-action-movie-plots";
 
+    //private string change from my part MM
+
 
     /**
      * Create and return an array of Movie items.  Duh!
