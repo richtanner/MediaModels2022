@@ -18,4 +18,5 @@
         app:layoutManager="LinearLayoutManager"
         tools:context="com.cs315.mediamodels2022.ItemDetailHostActivity"
         tools:listitem="@layout/item_list_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

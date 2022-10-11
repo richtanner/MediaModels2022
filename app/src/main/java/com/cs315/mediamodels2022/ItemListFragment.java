@@ -35,12 +35,10 @@ public class ItemListFragment extends Fragment {
 
     private FragmentItemListBinding binding;
 
+    private boolean setUpRecyclerView = false;
 
     // I am setting up my model creator... again this is called "movieMaker" only because I am doing movies!  Call yours whatever makes sense!
-    //So here is source of issue where thing CRASHES! TODO: fix why it crashes if I add in mine
-    //private static ProfsExampleMediaContent movieMaker = new ProfsExampleMediaContent();
-    //private static DavisMediaContent movieMaker = new DavisMediaContent();
-    private static AlissaDavisMediaContent movieMaker = new AlissaDavisMediaContent();
+    private static DavisMediaContent movieMaker = new DavisMediaContent();
     // CS315: DO THIS
     // After you create your OWN Model Creator, DELETE the reference to "ProfsExampleMediaContent" above and call your own!
 
@@ -71,12 +69,17 @@ public class ItemListFragment extends Fragment {
             View itemDetailFragmentContainer
     ) {
 
+        //if(setUpRecyclerView == false){
+        //    setUpRecyclerView = true;
+        //    movieMaker.createMovieMagic();
+        // }
+
         // CS315: I am calling MY Media Creator and having it populate with the line below... obviously, change that out to YOUR thing
         movieMaker.createMovieMagic();
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(
                 // After you create your OWN Model Creator, DELETE the reference to "movieMaker.MOVIES" below and call your own!
-                //movieMaker.SCHMOVIES,
-                movieMaker.MOVIES,
+                movieMaker.SCHMOVIES,
+                //movieMaker.MOVIES,
                 itemDetailFragmentContainer
         ));
     }
@@ -92,6 +95,12 @@ public class ItemListFragment extends Fragment {
 
         private final List<MediaModel> mediaValues;
         private final View mItemDetailFragmentContainer;
+
+        public void clear() {
+            int size = mediaValues.size();
+            mediaValues.clear();
+            notifyItemRangeRemoved(0, size);
+        }
 
         SimpleItemRecyclerViewAdapter(List<MediaModel> items,
                                       View itemDetailFragmentContainer) {
@@ -124,14 +133,13 @@ public class ItemListFragment extends Fragment {
                 } else {
                     Navigation.findNavController(itemView).navigate(R.id.show_item_detail, arguments);
                 }
+                clear();
             });
         }
 
         @Override
         public int getItemCount() {
             // CS315: DO THIS
-            // TODO: BUG FIX - Figure out why our movie list gets re-added every time we come back to this Activity
-            // TODO: it could be in THIS class, OR in the DumbMovieContent class, or maybe even somewhere else?
             return mediaValues.size();
         }
 

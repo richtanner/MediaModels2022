@@ -10,8 +10,10 @@ import java.util.List;
 import java.util.Map;
 
 public class DavisMediaContent {
-    Context context = this.context;
+    Context context = App.getContext();
     Resources res = context.getResources();
+
+    private boolean haveThis = false;
 
     /**
      * A map of the Movie items, by ID (title).
@@ -99,7 +101,19 @@ public class DavisMediaContent {
 
     // Internal helper so we don't forget any steps in the complex two-step system.  Seriously.  It happens.
     private void addMovieToList (MediaModel datMovie) {
-        SCHMOVIES.add(datMovie);
-        SCHITEM_MAP.put(datMovie.getMediaTitle(), datMovie);
+        if(SCHMOVIES.size() != 0){
+            for (int i = 0; i < SCHMOVIES.size(); i++){
+                if(SCHMOVIES.get(i) == datMovie){
+                    //we already have it
+                    haveThis = true;
+                }
+            }
+        }
+
+        if(haveThis == false) {
+            SCHMOVIES.add(datMovie);
+            SCHITEM_MAP.put(datMovie.getMediaTitle(), datMovie);
+        }
+
     }
 }

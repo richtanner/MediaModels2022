@@ -4,13 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".DavisMovieActivity">
 
+    <ProgressBar
+
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#228b22"
+        android:max="100"
+        app:layout_constraintBottom_toBottomOf="@+id/webviewer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <WebView
+        android:id="@+id/webviewer"
         android:layout_width="409dp"
         android:layout_height="729dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </WebView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

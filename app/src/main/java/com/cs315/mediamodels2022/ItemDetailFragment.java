@@ -50,8 +50,8 @@ public class ItemDetailFragment extends Fragment {
     private final View.OnDragListener dragListener = (v, event) -> {
         if (event.getAction() == DragEvent.ACTION_DROP) {
             ClipData.Item clipDataItem = event.getClipData().getItemAt(0);
-            //mediaItem = DavisMediaContent.SCHITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
-            mediaItem = AlissaDavisMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = DavisMediaContent.SCHITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            //mediaItem = AlissaDavisMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             updateContent();
         }
         return true;
@@ -71,8 +71,8 @@ public class ItemDetailFragment extends Fragment {
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the MEDIA content specified by the fragment arguments.
-            //mediaItem = DavisMediaContent.SCHITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
-            mediaItem = AlissaDavisMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = DavisMediaContent.SCHITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            //mediaItem = AlissaDavisMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             // maybe set the title here?
         }
     }
@@ -117,8 +117,12 @@ public class ItemDetailFragment extends Fragment {
 
                 // CS315: DO THIS
                 // Set the image based upon the string we got stashed in getMovieImage()
-                int davisID = getResources().getIdentifier(davisDir + mediaItem.getMediaImage(), null, null);
-                mediaImageView.setImageResource(davisID);
+                Context context = mediaImageView.getContext();
+                int imageID = context.getResources().getIdentifier(mediaItem.getMediaImage(), "drawable", context.getPackageName());
+                //int davisID = getResources().getIdentifier(mediaItem.getMediaImage(), null, null);
+                //int testing = R.drawable.dragonheartimage;
+
+                mediaImageView.setImageResource(imageID);
             }
 
             if (mediaFab != null)
@@ -129,10 +133,11 @@ public class ItemDetailFragment extends Fragment {
                     {
 
                         // CS315: DO THIS
-                        // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
-                        // TODO: hint - you need to establish a new intent and launch a new Activity
+                        // launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
+                        //  hint - you need to establish a new intent and launch a new Activity
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
                         Intent intent = new Intent(getActivity(), DavisMovieActivity.class);
+                        intent.putExtra("URL", mediaItem.getMediaWeblink());
                         startActivity(intent);
                         //Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
                         //        .setAction("Action", null).show();

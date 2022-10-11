@@ -21,26 +21,26 @@ Maybe the villain tries to get revenge on the hero for getting revenge on the vi
     <string name="DavisTitleEragon">Eragon</string>
     <string name="DavisDescEragon">In his homeland of Alagaesia, a farm boy happens upon a dragon\'s egg –– a discovery that leads him on a predestined journey where he realizes he\'s the one person who can defend his home against an evil king.</string>
     <string name="DavisYearEragon">2006</string>
-    <string name="DavisImageEragon">drawable/eragonimage.png</string>
+    <string name="DavisImageEragon">eragonimage</string>
     <string name="DavisLinkEragon">https://www.imdb.com/title/tt0449010/?ref_=tt_mv_close</string>
     <string name="DavisTitleLionKing">The Lion King</string>
     <string name="DavisDescLionKing">Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.</string>
     <string name="DavisYearLionKing">1994</string>
-    <string name="DavisImageLionKing">drawable/lionkingimage.png</string>
+    <string name="DavisImageLionKing">lionkingimage</string>
     <string name="DavisLinkLionKing">https://www.imdb.com/title/tt0110357/?ref_=fn_al_tt_0</string>
     <string name="DavisTitleLionKing2">The Lion King II: Simba\'s Pride</string>
     <string name="DavisDescLionKing2">Simba\'s daughter is the key to a resolution of a bitter feud between Simba\'s pride and the outcast pride led by the mate of Scar.</string>
     <string name="DavisYearLionKing2">1998</string>
-    <string name="DavisImageLionKing2">drawable/lionking2image.png</string>
+    <string name="DavisImageLionKing2">lionking2image</string>
     <string name="DavisLinkLionKing2">https://www.imdb.com/title/tt0120131/?ref_=fn_al_tt_3</string>
     <string name="DavisTitleLionKing1Half">The Lion King 3: Hakuna Matata</string>
     <string name="DavisDescLionKing1Half">Timon the meerkat and Pumbaa the warthog retell the story of The Lion King (1994) from their own perspective.</string>
     <string name="DavisYearLionKing1Half">2004</string>
-    <string name="DavisImageLionKing1Half">drawable/lionking3image.png</string>
+    <string name="DavisImageLionKing1Half">lionking3image</string>
     <string name="DavisLinkLionKing1Half">https://www.imdb.com/title/tt0318403/?ref_=tt_mv_close</string>
     <string name="DavisTitleDragonHeart">DragonHeart</string>
     <string name="DavisDescDragonHeart">The last dragon and a disillusioned dragonslaying Knight must cooperate to stop an evil King, who was given partial immortality.</string>
     <string name="DavisYearDragonHeart">1996</string>
-    <string name="DavisImageDragonHeart">drawable/dragonheartimage.jpg</string>
+    <string name="DavisImageDragonHeart">dragonheartimage</string>
     <string name="DavisLinkDragonHeart">https://www.imdb.com/title/tt0116136/?ref_=nv_sr_srsg_6</string>
 </resources>
