@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,7 +36,6 @@ public class ItemListFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         binding = FragmentItemListBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
@@ -78,8 +78,7 @@ public class ItemListFragment extends Fragment {
         private final List<MediaModel> mediaValues;
         private final View mItemDetailFragmentContainer;
 
-        SimpleItemRecyclerViewAdapter(List<MediaModel> items,
-                                      View itemDetailFragmentContainer) {
+        SimpleItemRecyclerViewAdapter(List<MediaModel> items, View itemDetailFragmentContainer) {
             mediaValues = items;
             mItemDetailFragmentContainer = itemDetailFragmentContainer;
         }
@@ -96,11 +95,16 @@ public class ItemListFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
+
             holder.mediaItem = mediaValues.get(position);
             holder.mIdView.setText(mediaValues.get(position).getMediaTitle());
             holder.mContentView.setText(mediaValues.get(position).getMediaYear());
+            holder.mImageView.setImageResource(Integer.parseInt(mediaValues.get(position).getMediaImage()));
+            holder.mDescription.setText(mediaValues.get(position).getMediaDescription());
+
 
             holder.itemView.setTag(mediaValues.get(position));
+            
             holder.itemView.setOnClickListener(itemView -> {
                 Bundle arguments = new Bundle();
                 arguments.putString(ItemDetailFragment.ARG_ITEM_ID, mediaValues.get(position).getMediaTitle());
@@ -111,6 +115,7 @@ public class ItemListFragment extends Fragment {
                     Navigation.findNavController(itemView).navigate(R.id.show_item_detail, arguments);
                 }
             });
+
         }
 
         @Override
@@ -121,12 +126,16 @@ public class ItemListFragment extends Fragment {
         static class ViewHolder extends RecyclerView.ViewHolder {
             final TextView mIdView;
             final TextView mContentView;
+            final TextView mDescription;
             public MediaModel mediaItem;
-
+            final ImageView mImageView;
+            
             ViewHolder(ItemListContentBinding binding) {
                 super(binding.getRoot());
                 mIdView = binding.idText;
-                mContentView = binding.content;
+                mContentView = binding.date;
+                mImageView = binding.image;
+                mDescription = binding.description;
             }
         }
     }

@@ -31,7 +31,7 @@ public class MediaModel {
     }
 
     public String getMediaImage() {
-        return mediaImage.toString();
+        return String.valueOf(mediaImage);
     }
 
     public String getMediaWeblink() {
