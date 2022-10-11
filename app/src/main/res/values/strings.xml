@@ -1,5 +1,30 @@
 <resources>
     <string name="app_name">MediaModels2022</string>
     <string name="title_item_detail">Item Detail</string>
+
     <string name="AOTCharacter1Name">Eren Jaegar</string>
+    <string name="AOTCharacter1Description">The boy who sought Freedom. Eren Jaegar is the main protagonist and antagonist of Attack on Titan. He is the last possessor of the Attack Titan, Warhammer Titan and Founding Titan, fighting for Eldias freedom.</string>
+    <string name="AOTCharacter1Year">835</string>
+    <string name="AOTCharacter1WebLink">https://attackontitan.fandom.com/wiki/Eren_Jaeger_(Anime)</string>
+
+    <string name="AOTCharacter2Name">Reiner Braun</string>
+    <string name="AOTCharacter2Description">The Armoured Titan. Marleys Shield. The Soldier/Warrior that deserved the best of both worlds.</string>
+    <string name="AOTCharacter2Year">830</string>
+    <string name="AOTCharacter2WebLink">https://attackontitan.fandom.com/wiki/Reiner_Braun</string>
+
+    <string name="AOTCharacter3Name">Armin Arlert</string>
+    <string name="AOTCharacter3Description">The Dreamer and Thinker. The Eldian who killed Eren Jaegar, the Attack Titan.</string>
+    <string name="AOTCharacter3Year">834</string>
+    <string name="AOTCharacter3WebLink">https://attackontitan.fandom.com/wiki/Armin_Arlert</string>
+
+    <string name="AOTCharacter4Name">Mikasa Ackerman</string>
+    <string name="AOTCharacter4Description">Strongest member of the 104th Survey Corps, and Eldian savior of humanity.</string>
+    <string name="AOTCharacter4Year">835</string>
+    <string name="AOTCharacter4WebLink">https://attackontitan.fandom.com/wiki/Mikasa_Ackerman</string>
+
+    <string name="AOTCharacter5Name">Floch Forster</string>
+    <string name="AOTCharacter5Description">The Devils Assistant. Floch is the second right hand man of Eren Jaegar and the leader to the new Eldian Empire and the Jaegarists</string>
+    <string name="AOTCharacter5Year">835</string>
+    <string name="AOTCharacter5WebLink">https://attackontitan.fandom.com/wiki/Floch_Forster</string>
+
 </resources>

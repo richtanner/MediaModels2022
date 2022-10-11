@@ -17,10 +17,45 @@ public class MarlonMillerMediaContent {
 
     //private static AccessController App;
     //private AccessController App;
-    static Context context = MarlonMillerMediaContent.getContext();
-    static Resources resources = context.getResources();
+    //static Context context = myAppContext.getContext();
+    //static Resources resources = context.getResources();
 
-    private static final String character1Name = resources.getString(R.string.AOTCharacter1Name);
+    // *****************************************************************************************
+    // This is the method to use the strings from strings.xml but Context and Resources make the
+    // application crash. So I decided to use the simple strings as long as it runs.
+    // *****************************************************************************************
+
+//    private static final String character1Name = resources.getString(R.string.AOTCharacter1Name);
+//    private static final String character1Description = resources.getString(R.string.AOTCharacter1Description);
+//    private static final String character1Year = resources.getString(R.string.AOTCharacter1Year);
+//    private static final String character1Image = String.valueOf(R.drawable.eren_jaegar);
+//    private static final String character1WebLink = resources.getString(R.string.AOTCharacter1WebLink);
+//
+//    private static final String character2Name = resources.getString(R.string.AOTCharacter2Name);
+//    private static final String character2Description = resources.getString(R.string.AOTCharacter2Description);
+//    private static final String character2Year = resources.getString(R.string.AOTCharacter2Year);
+//    private static final String character2Image = String.valueOf(R.drawable.reiner_braun);
+//    private static final String character2WebLink = resources.getString(R.string.AOTCharacter2WebLink);
+//
+//    private static final String character3Name = resources.getString(R.string.AOTCharacter3Name);
+//    private static final String character3Description = resources.getString(R.string.AOTCharacter3Description);
+//    private static final String character3Year = resources.getString(R.string.AOTCharacter3Year);
+//    private static final String character3Image = String.valueOf(R.drawable.armin);
+//    private static final String character3WebLink = resources.getString(R.string.AOTCharacter3WebLink);
+//
+//    private static final String character4Name = resources.getString(R.string.AOTCharacter4Name);
+//    private static final String character4Description = resources.getString(R.string.AOTCharacter4Description);
+//    private static final String character4Year = resources.getString(R.string.AOTCharacter4Year);
+//    private static final String character4Image = String.valueOf(R.drawable.mikasa);
+//    private static final String character4WebLink = resources.getString(R.string.AOTCharacter4WebLink);
+//
+//    private static final String character5Name = resources.getString(R.string.AOTCharacter5Name);
+//    private static final String character5Description = resources.getString(R.string.AOTCharacter5Description);
+//    private static final String character5Year = resources.getString(R.string.AOTCharacter5Year);
+//    private static final String character5Image = String.valueOf(R.drawable.floch);
+//    private static final String character5WebLink = resources.getString(R.string.AOTCharacter5WebLink);
+
+    private static final String character1Name = "Eren Jaegar";
     private static final String character1Description = "The boy who sought Freedom. Eren Jaegar is the main protagonist and antagonist of Attack on Titan. He is the last possessor of the Attack Titan, Warhammer Titan and Founding Titan, fighting for Eldia's freedom.";
     private static final String character1Year = "835";
     private static final String character1Image = "eren_jaegar";
@@ -70,9 +105,14 @@ public class MarlonMillerMediaContent {
         return AOT;
     }
 
+    private boolean fullList = false;
     // Internal helper so we don't forget any steps in the complex two-step system.  Seriously.  It happens.
     private void addCharacterToList (MediaModel character) {
-        AOT.add(character);
-        MM_MAP.put(character.getMediaTitle(), character);
+
+        // Bad implementation to avoid repetition but solves for 5 constant names being printed in the view
+        if(AOT.size() <= 4) {
+            AOT.add(character);
+            MM_MAP.put(character.getMediaTitle(), character);
+        }
     }
 }
