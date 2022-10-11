@@ -2,6 +2,7 @@ package com.cs315.mediamodels2022;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -97,6 +99,8 @@ public class ItemDetailFragment extends Fragment {
         binding = null;
     }
 
+    private static String URL = "";
+
     private void updateContent()
     {
         if (mediaItem != null)
@@ -110,10 +114,9 @@ public class ItemDetailFragment extends Fragment {
 
             if (mediaImageView != null)
             {
-
                 // CS315: DO THIS
-                // TODO: Set the image based upon the string we got stashed in getMovieImage()
-
+                int id = getResources().getIdentifier("com.cs325.mediamodels2022:drawable/" + mediaItem.getMediaImage(), null, null);
+                mediaImageView.setImageResource(id);
             }
 
             if (mediaFab != null)
@@ -122,14 +125,11 @@ public class ItemDetailFragment extends Fragment {
                     @Override
                     public void onClick(View view)
                     {
-
                         // CS315: DO THIS
-                        // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
-                        // TODO: hint - you need to establish a new intent and launch a new Activity
-                        // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
-
-                        Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
+                        Intent intent = new Intent(ItemDetailFragment.this.getContext(), WebViewActivity.class);
+                        URL = mediaItem.getMediaWeblink();
+                        intent.putExtra("url", URL);
+                        startActivity(intent);
                     }
                 });
             }
