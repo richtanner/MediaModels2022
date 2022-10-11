@@ -32,6 +32,7 @@ public class DavisMovieActivity extends AppCompatActivity {
         wbv = (WebView) findViewById(res.getLayout(R.layout.activity_davis_movie).getIdAttributeResourceValue(R.id.webviewer));
         pgB = findViewById(R.id.progressBar);
         wbv.setWebViewClient(new WebViewClient());
+        wbv.getSettings().setJavaScriptEnabled(true);
         wbv.loadUrl(webURL);
     }
 
@@ -39,11 +40,6 @@ public class DavisMovieActivity extends AppCompatActivity {
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon){
             super.onPageStarted(view, url, favicon);
-        }
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url){
-            view.loadUrl(url);
-            return true;
         }
         @Override
         public void onPageFinished(WebView view, String url){
