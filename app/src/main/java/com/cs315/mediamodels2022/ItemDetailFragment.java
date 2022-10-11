@@ -34,11 +34,12 @@ public class ItemDetailFragment extends Fragment {
      * We used the MediaTitle as our ID.
      */
     public static final String ARG_ITEM_ID = "item_id";
-
+    public static final String link = null;
     /**
      * The Movie content this fragment is presenting.
      */
     private MediaModel mediaItem;
+
 
     private CollapsingToolbarLayout mToolbarLayout;
     private TextView mediaDetailTextView;
@@ -135,7 +136,7 @@ public class ItemDetailFragment extends Fragment {
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
 
                         Intent intent = new Intent(getActivity(), MarlonMillerActivity.class);
-                        intent.putExtra(null,mediaItem.getMediaWeblink());
+                        intent.putExtra(link,mediaItem.getMediaWeblink());
                         startActivity(intent);
                         //Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
                         //        .setAction("Action", null).show();
