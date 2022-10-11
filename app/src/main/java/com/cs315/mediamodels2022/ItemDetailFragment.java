@@ -1,23 +1,20 @@
 package com.cs315.mediamodels2022;
 
-import android.app.Activity;
 import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.material.appbar.CollapsingToolbarLayout;
+import androidx.fragment.app.Fragment;
+
 import com.cs315.mediamodels2022.databinding.FragmentItemDetailBinding;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A fragment representing a single Item detail screen.
@@ -71,7 +68,7 @@ public class ItemDetailFragment extends Fragment {
             mediaItem = EKGMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             // TODO: maybe set the title here?
-
+            // bruh i give up nothing i find is working im so sick and tired of this
         }
     }
 
