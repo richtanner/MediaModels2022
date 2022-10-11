@@ -2,6 +2,8 @@
     <string name="app_name">MediaModels2022</string>
     <string name="title_item_detail">Item Detail</string>
 
+    <string name="ItemListFragmentTitle">Attack On Titan Characters</string>
+
     <string name="AOTCharacter1Name">Eren Jaegar</string>
     <string name="AOTCharacter1Description">The boy who sought Freedom. Eren Jaegar is the main protagonist and antagonist of Attack on Titan. He is the last possessor of the Attack Titan, Warhammer Titan and Founding Titan, fighting for Eldias freedom.</string>
     <string name="AOTCharacter1Year">835</string>

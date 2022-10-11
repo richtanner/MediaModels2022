@@ -15,16 +15,15 @@ public class MarlonMillerMediaContent {
     public static final Map<String,MediaModel> MM_MAP = new HashMap<String,MediaModel>();
     public static final List<MediaModel> AOT = new ArrayList<MediaModel>(); // Attack on Titan Characters
 
-    //private static AccessController App;
-    //private AccessController App;
-    //static Context context = myAppContext.getContext();
-    //static Resources resources = context.getResources();
+
 
     // *****************************************************************************************
     // This is the method to use the strings from strings.xml but Context and Resources make the
     // application crash. So I decided to use the simple strings as long as it runs.
     // *****************************************************************************************
 
+//    static Context context = myAppContext.getContext();
+//    static Resources resources = context.getResources();
 //    private static final String character1Name = resources.getString(R.string.AOTCharacter1Name);
 //    private static final String character1Description = resources.getString(R.string.AOTCharacter1Description);
 //    private static final String character1Year = resources.getString(R.string.AOTCharacter1Year);
