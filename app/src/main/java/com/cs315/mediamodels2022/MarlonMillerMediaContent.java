@@ -1,5 +1,10 @@
 package com.cs315.mediamodels2022;
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.provider.MediaStore;
+
+import java.security.AccessController;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,7 +15,12 @@ public class MarlonMillerMediaContent {
     public static final Map<String,MediaModel> MM_MAP = new HashMap<String,MediaModel>();
     public static final List<MediaModel> AOT = new ArrayList<MediaModel>(); // Attack on Titan Characters
 
-    private static final String character1Name = "Eren Jaegar";
+    //private static AccessController App;
+    //private AccessController App;
+    static Context context = MarlonMillerMediaContent.getContext();
+    static Resources resources = context.getResources();
+
+    private static final String character1Name = resources.getString(R.string.AOTCharacter1Name);
     private static final String character1Description = "The boy who sought Freedom. Eren Jaegar is the main protagonist and antagonist of Attack on Titan. He is the last possessor of the Attack Titan, Warhammer Titan and Founding Titan, fighting for Eldia's freedom.";
     private static final String character1Year = "835";
     private static final String character1Image = "eren_jaegar";
