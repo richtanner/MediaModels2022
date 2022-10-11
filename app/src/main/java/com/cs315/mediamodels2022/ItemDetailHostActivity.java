@@ -8,6 +8,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.core.splashscreen.SplashScreen;
 
 import com.cs315.mediamodels2022.databinding.ActivityItemDetailBinding;
 
@@ -24,6 +25,7 @@ public class ItemDetailHostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         ActivityItemDetailBinding binding = ActivityItemDetailBinding.inflate(getLayoutInflater());
+        SplashScreen.installSplashScreen(this);
         setContentView(binding.getRoot());
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
