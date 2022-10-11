@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class MarlonMillerMediaContent {
 
-    public static final Map<String,MediaModel> map = new HashMap<String,MediaModel>();
+    public static final Map<String,MediaModel> MM_MAP = new HashMap<String,MediaModel>();
     public static final List<MediaModel> AOT = new ArrayList<MediaModel>(); // Attack on Titan Characters
 
     private static final String character1Name = "Eren Jaegar";
@@ -40,4 +40,29 @@ public class MarlonMillerMediaContent {
     private static final String character5Image = "floch";
     private static final String character5WebLink = "https://attackontitan.fandom.com/wiki/Floch_Forster";
 
+    public List<MediaModel> createAOTCharacters () {
+
+        // make those movie objects
+        MediaModel eren = new MediaModel(character1Name, character1Description, character1Year, character1Image, character1WebLink);
+        MediaModel reiner = new MediaModel(character2Name, character2Description, character2Year, character2Image, character2WebLink);
+        MediaModel armin = new MediaModel(character3Name, character3Description, character3Year, character3Image, character3WebLink);
+        MediaModel mikasa = new MediaModel(character4Name, character4Description, character4Year, character4Image, character4WebLink);
+        MediaModel floch = new MediaModel(character5Name, character5Description, character5Year, character5Image, character5WebLink);
+
+        // add EACH movie object to our lists and maps
+        addCharacterToList(eren);
+        addCharacterToList(reiner);
+        addCharacterToList(armin);
+        addCharacterToList(mikasa);
+        addCharacterToList(floch);
+
+        // no more movies to add?  Okay... return our list
+        return AOT;
+    }
+
+    // Internal helper so we don't forget any steps in the complex two-step system.  Seriously.  It happens.
+    private void addCharacterToList (MediaModel character) {
+        AOT.add(character);
+        MM_MAP.put(character.getMediaTitle(), character);
+    }
 }
