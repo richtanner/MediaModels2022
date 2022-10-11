@@ -43,11 +43,13 @@ public class ItemDetailFragment extends Fragment {
     private TextView mediaDetailTextView;
     private ImageView mediaImageView;
     private FloatingActionButton mediaFab;
+    private String mainDir = "com.cs315.mediamodels2022:";
 
     private final View.OnDragListener dragListener = (v, event) -> {
         if (event.getAction() == DragEvent.ACTION_DROP) {
             ClipData.Item clipDataItem = event.getClipData().getItemAt(0);
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            //mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = MarlonMillerMediaContent.MM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             updateContent();
         }
         return true;
@@ -67,7 +69,7 @@ public class ItemDetailFragment extends Fragment {
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the MEDIA content specified by the fragment arguments.
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = MarlonMillerMediaContent.MM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             // maybe set the title here?
         }
@@ -113,7 +115,8 @@ public class ItemDetailFragment extends Fragment {
 
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
-
+                int id = getResources().getIdentifier(mainDir + mediaItem.getMediaImage(), null, null);
+                mediaImageView.setImageResource(id);
             }
 
             if (mediaFab != null)
