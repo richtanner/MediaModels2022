@@ -5,6 +5,7 @@ import android.content.ClipDescription;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -37,7 +38,7 @@ public class ItemListFragment extends Fragment {
 
 
     // I am setting up my model creator... again this is called "movieMaker" only because I am doing movies!  Call yours whatever makes sense!
-    private static ProfsExampleMediaContent movieMaker = new ProfsExampleMediaContent();
+    private static GriffinMediaContent movieMaker = new GriffinMediaContent();
 
     // CS315: DO THIS
     // TODO: After you create your OWN Model Creator, DELETE the reference to "ProfsExampleMediaContent" above and call your own!
@@ -47,6 +48,8 @@ public class ItemListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentItemListBinding.inflate(inflater, container, false);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Movies");
         return binding.getRoot();
 
     }
@@ -73,6 +76,7 @@ public class ItemListFragment extends Fragment {
         movieMaker.createMovieMagic();
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(
                 // TODO: After you create your OWN Model Creator, DELETE the reference to "movieMaker.MOVIES" below and call your own!
+
                 movieMaker.MOVIES,
                 itemDetailFragmentContainer
         ));
