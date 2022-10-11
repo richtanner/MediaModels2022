@@ -135,7 +135,7 @@ public class ItemDetailFragment extends Fragment {
                         // CS315: DO THIS
                         // launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                         //  hint - you need to establish a new intent and launch a new Activity
-                        // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
+                        //also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
                         Intent intent = new Intent(getActivity(), DavisMovieActivity.class);
                         intent.putExtra("URL", mediaItem.getMediaWeblink());
                         startActivity(intent);
