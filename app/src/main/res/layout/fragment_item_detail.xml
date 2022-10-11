@@ -33,6 +33,7 @@
                 android:id="@+id/media_imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#1E272C"
                 app:srcCompat="@drawable/droidmedia" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -62,15 +63,21 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        android:background="@color/purple_200"
-        android:src="@drawable/plus_sign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
+        android:background="@color/purple_200"
+        android:src="@drawable/plus_sign"
         app:backgroundTint="#6200ED"
         app:fabSize="normal"
-        app:layout_anchor="@+id/item_detail_scroll_view"
+        app:layout_anchor="@id/bottomAppBar"
         app:layout_anchorGravity="end|bottom" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_anchor="@+id/item_detail_scroll_view"
+        app:layout_anchorGravity="bottom|center" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
