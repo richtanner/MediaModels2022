@@ -42,4 +42,6 @@ public class ItemDetailHostActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_item_detail);
         return navController.navigateUp() || super.onSupportNavigateUp();
     }
+
+
 }

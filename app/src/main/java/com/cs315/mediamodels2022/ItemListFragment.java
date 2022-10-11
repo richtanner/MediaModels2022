@@ -1,5 +1,6 @@
 package com.cs315.mediamodels2022;
 
+import android.app.ActionBar;
 import android.content.ClipData;
 import android.content.ClipDescription;
 import android.os.Build;
@@ -42,7 +43,6 @@ public class ItemListFragment extends Fragment {
     // CS315: DO THIS
     // TODO: After you create your OWN Model Creator, DELETE the reference to "ProfsExampleMediaContent" above and call your own!
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentItemListBinding.inflate(inflater, container, false);
@@ -54,6 +54,8 @@ public class ItemListFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         RecyclerView recyclerView = binding.itemList;
+
+
 
         // Leaving this not using view binding as it relies on if the view is visible the current
         // layout configuration (layout, layout-sw600dp)

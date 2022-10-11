@@ -20,6 +20,8 @@ import com.cs315.mediamodels2022.databinding.FragmentItemDetailBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Objects;
+
 /**
  * A fragment representing a single Item detail screen.
  * This fragment is either contained in a {@link ItemListFragment}
@@ -92,6 +94,7 @@ public class ItemDetailFragment extends Fragment {
         // Show the placeholder content as text in a TextView & in the toolbar if available.
         updateContent();
         rootView.setOnDragListener(dragListener);
+        requireActivity().setTitle("Team B");
         return rootView;
     }
 
@@ -138,8 +141,6 @@ public class ItemDetailFragment extends Fragment {
                         Intent intent = new Intent(ItemDetailFragment.super.getActivity(), LoadWebPage.class);
                         intent.putExtra(WEBURL, mediaItem.getMediaWeblink());
                         startActivity(intent);
-                        Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
                     }
                 });
             }
