@@ -11,6 +11,7 @@
         android:roundIcon="@drawable/droidmedia"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediaModels2022"
+        android:name=".myAppContext"
         tools:targetApi="31">
         <activity
             android:name=".MarlonMillerActivity"
