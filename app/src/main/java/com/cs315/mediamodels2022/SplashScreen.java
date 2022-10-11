@@ -17,7 +17,7 @@ public class SplashScreen extends AppCompatActivity {
 
         mHandler = new Handler();
         mRunnable = () -> {
-            Intent intent = new Intent(SplashScreen.this,ItemListFragment.class);
+            Intent intent = new Intent(SplashScreen.this,ItemDetailHostActivity.class);
             startActivity(intent);
             finish();
         };

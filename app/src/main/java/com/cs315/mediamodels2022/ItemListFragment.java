@@ -56,10 +56,7 @@ public class ItemListFragment extends Fragment {
         setupRecyclerView(recyclerView, itemDetailFragmentContainer);
     }
 
-    private void setupRecyclerView(
-            RecyclerView recyclerView,
-            View itemDetailFragmentContainer
-    ) {
+    private void setupRecyclerView(RecyclerView recyclerView, View itemDetailFragmentContainer) {
 
         // CS315: I am calling MY Media Creator and having it populate with the line below... obviously, change that out to YOUR thing
        gameMaker.createGame();

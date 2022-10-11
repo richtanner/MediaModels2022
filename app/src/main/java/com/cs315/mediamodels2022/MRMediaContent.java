@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class MRMediaContent {
 
-    Context context = this.context;
-    Resources res = context.getResources();
+    private final Context context = FNV_Wiki.getContext();
+    private final Resources res = context.getResources();
 
     /**
      * A map of the Movie items, by ID (title).
@@ -23,6 +23,7 @@ public class MRMediaContent {
      */
     // I am calling this MOVIES, because that's what I am putting in here.  You can call it GAMES, or BOOKS, or ANIME, or FAVORITE_CS_TEXTBOOKS, ...whatever
     public static final List<MediaModel> GAME = new ArrayList<MediaModel>();
+
 
     // TODO: COPY this class to create your OWN MediaContent.  Then, create five NEW media objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
 
@@ -85,7 +86,10 @@ public class MRMediaContent {
 
     // Internal helper so we don't forget any steps in the complex two-step system.  Seriously.  It happens.
     private void addfnvToList (MediaModel game) {
-        GAME.add(game);
-        ITEM_MAP.put(game.getMediaTitle(), game);
+        String title = game.getMediaTitle();
+        if (!(ITEM_MAP.containsKey(title))) {
+            GAME.add(game);
+            ITEM_MAP.put(game.getMediaTitle(), game);
+        }
     }
 }

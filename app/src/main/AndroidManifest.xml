@@ -13,6 +13,7 @@
         android:roundIcon="@drawable/gamecontroller"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediaModels2022"
+        android:name=".FNV_Wiki"
         tools:targetApi="31">
         <activity
             android:name=".SplashScreen"
