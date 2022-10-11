@@ -91,6 +91,7 @@ public class ItemDetailFragment extends Fragment {
         // Show the placeholder content as text in a TextView & in the toolbar if available.
         updateContent();
         rootView.setOnDragListener(dragListener);
+        //mediaFab.setOnClickListener((View.OnClickListener) this);
         return rootView;
     }
 
@@ -116,8 +117,9 @@ public class ItemDetailFragment extends Fragment {
 
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
-                int id = getResources().getIdentifier(mainDir + mediaItem.getMediaImage(), null, null);
-                mediaImageView.setImageResource(id);
+                mediaImageView.setImageResource(Integer.parseInt(mediaItem.getMediaImage()));
+                //int id = getResources().getIdentifier(mainDir + mediaItem.getMediaImage(), null, null);
+                //mediaImageView.setImageResource(id);
             }
 
             if (mediaFab != null)
