@@ -58,15 +58,16 @@ public class BriggsMediaThing {
     /**
      * Create and return an array of Movie items.  Duh!
      */
-    public List<MediaModel> createMovieMagic () {
+    public List<MediaModel> createGameMagic () {
 
         // make those movie objects
         MediaModel guiltyGearStrive = new MediaModel(game5Title, game5Description, game5Year, game5Image, game5Weblink);
         MediaModel hitman3 = new MediaModel(game4Title, game4Description, game4Year, game4Image, game4Weblink);
-        MediaModel dragonQuest11 = new MediaModel(game3Title, game3Title, game3Year, game3Image, game3Weblink);
+        MediaModel dragonQuest11 = new MediaModel(game3Title, game3Description, game3Year, game3Image, game3Weblink);
         MediaModel itTakes2 = new MediaModel(game2Title, game2Description, game2Year, game2Image, game2Weblink);
         MediaModel bowsersFury = new MediaModel(game1Title, game1Description, game1Year, game1Image, game1Weblink);
 
+        DUNKEYTOP52021.clear();
         // add EACH movie object to our lists and maps
         addGameToList(guiltyGearStrive);
         addGameToList(hitman3);
@@ -79,7 +80,9 @@ public class BriggsMediaThing {
     }
 
     // Internal helper so we don't forget any steps in the complex two-step system.  Seriously.  It happens.
-    private void addGameToList (MediaModel datGame) {
+    private void addGameToList (MediaModel datGame)
+    {
+
         DUNKEYTOP52021.add(datGame);
         ITEM_MAP.put(datGame.getMediaTitle(), datGame);
     }

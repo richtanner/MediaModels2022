@@ -70,7 +70,7 @@ public class ItemListFragment extends Fragment {
     ) {
 
         // CS315: I am calling MY Media Creator and having it populate with the line below... obviously, change that out to YOUR thing
-        gameMaker.createMovieMagic();
+        gameMaker.createGameMagic();
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(
                 // TODO: ***DONE *** After you create your OWN Model Creator, DELETE the reference to "movieMaker.MOVIES" below and call your own!
                 BriggsMediaThing.DUNKEYTOP52021,
