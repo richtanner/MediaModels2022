@@ -2,6 +2,8 @@ package com.cs315.mediamodels2022;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 
@@ -43,11 +45,13 @@ public class ItemDetailFragment extends Fragment {
     private TextView mediaDetailTextView;
     private ImageView mediaImageView;
     private FloatingActionButton mediaFab;
+    private String davisDir = "com.cs315.mediamodels2022:";
 
     private final View.OnDragListener dragListener = (v, event) -> {
         if (event.getAction() == DragEvent.ACTION_DROP) {
             ClipData.Item clipDataItem = event.getClipData().getItemAt(0);
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            //mediaItem = DavisMediaContent.SCHITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = AlissaDavisMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             updateContent();
         }
         return true;
@@ -67,8 +71,8 @@ public class ItemDetailFragment extends Fragment {
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the MEDIA content specified by the fragment arguments.
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
-
+            //mediaItem = DavisMediaContent.SCHITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = AlissaDavisMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             // maybe set the title here?
         }
     }
@@ -112,8 +116,9 @@ public class ItemDetailFragment extends Fragment {
             {
 
                 // CS315: DO THIS
-                // TODO: Set the image based upon the string we got stashed in getMovieImage()
-
+                // Set the image based upon the string we got stashed in getMovieImage()
+                int davisID = getResources().getIdentifier(davisDir + mediaItem.getMediaImage(), null, null);
+                mediaImageView.setImageResource(davisID);
             }
 
             if (mediaFab != null)
@@ -127,9 +132,10 @@ public class ItemDetailFragment extends Fragment {
                         // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                         // TODO: hint - you need to establish a new intent and launch a new Activity
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
-
-                        Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
+                        Intent intent = new Intent(getActivity(), DavisMovieActivity.class);
+                        startActivity(intent);
+                        //Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
+                        //        .setAction("Action", null).show();
                     }
                 });
             }

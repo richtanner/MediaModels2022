@@ -37,10 +37,12 @@ public class ItemListFragment extends Fragment {
 
 
     // I am setting up my model creator... again this is called "movieMaker" only because I am doing movies!  Call yours whatever makes sense!
-    private static ProfsExampleMediaContent movieMaker = new ProfsExampleMediaContent();
-
+    //So here is source of issue where thing CRASHES! TODO: fix why it crashes if I add in mine
+    //private static ProfsExampleMediaContent movieMaker = new ProfsExampleMediaContent();
+    //private static DavisMediaContent movieMaker = new DavisMediaContent();
+    private static AlissaDavisMediaContent movieMaker = new AlissaDavisMediaContent();
     // CS315: DO THIS
-    // TODO: After you create your OWN Model Creator, DELETE the reference to "ProfsExampleMediaContent" above and call your own!
+    // After you create your OWN Model Creator, DELETE the reference to "ProfsExampleMediaContent" above and call your own!
 
 
     @Override
@@ -72,7 +74,8 @@ public class ItemListFragment extends Fragment {
         // CS315: I am calling MY Media Creator and having it populate with the line below... obviously, change that out to YOUR thing
         movieMaker.createMovieMagic();
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(
-                // TODO: After you create your OWN Model Creator, DELETE the reference to "movieMaker.MOVIES" below and call your own!
+                // After you create your OWN Model Creator, DELETE the reference to "movieMaker.MOVIES" below and call your own!
+                //movieMaker.SCHMOVIES,
                 movieMaker.MOVIES,
                 itemDetailFragmentContainer
         ));
