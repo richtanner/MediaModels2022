@@ -2,6 +2,7 @@ package com.cs315.mediamodels2022;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 
@@ -44,10 +45,12 @@ public class ItemDetailFragment extends Fragment {
     private ImageView mediaImageView;
     private FloatingActionButton mediaFab;
 
+    public static String WEBURL;
+
     private final View.OnDragListener dragListener = (v, event) -> {
         if (event.getAction() == DragEvent.ACTION_DROP) {
             ClipData.Item clipDataItem = event.getClipData().getItemAt(0);
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = LaurenNajeraMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             updateContent();
         }
         return true;
@@ -67,7 +70,7 @@ public class ItemDetailFragment extends Fragment {
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the MEDIA content specified by the fragment arguments.
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = LaurenNajeraMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             // maybe set the title here?
         }
@@ -113,9 +116,12 @@ public class ItemDetailFragment extends Fragment {
 
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
+                String imageName = mediaItem.getMediaImage();
+                //fix this
+                int imageId = getResources().getIdentifier(mediaItem.getMediaImage(), "drawable", getContext().getPackageName());
+                mediaImageView.setImageResource(imageId);
 
             }
-
             if (mediaFab != null)
             {
                 mediaFab.setOnClickListener(new View.OnClickListener() {
@@ -127,7 +133,9 @@ public class ItemDetailFragment extends Fragment {
                         // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                         // TODO: hint - you need to establish a new intent and launch a new Activity
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
-
+                        Intent intent = new Intent(ItemDetailFragment.super.getActivity(), WebActivity.class);
+                        intent.putExtra(WEBURL, mediaItem.getMediaWeblink());
+                        startActivity(intent);
                         Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     }

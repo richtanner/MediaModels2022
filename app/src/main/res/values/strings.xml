@@ -1,4 +1,35 @@
 <resources>
     <string name="app_name">MediaModels2022</string>
     <string name="title_item_detail">Item Detail</string>
+
+    <string name="movie1Title">2012</string>
+    <string name="movie1Description">A Natural Disaster that follow 2 story lines. One about a man struggling to keep his family alive during a world-ending natural disaster; and, the other about a writer who discovers this event being caused by the Earth\'s core heating up. Throughout the movie, all governments struggle to a plan into action to save all of humanity. This movie gives us a great representation of what happen to all people, rich and poor, during an event like this. Will all of humanity be saved, or will the world swallow it\'s largest population and doom us all?</string>
+    <string name="movie1Year">2009</string>
+    <string name="movie1Image">twenty_twelve</string>
+    <string name="movie1WebLink">https://en.wikipedia.org/wiki/2012_(film)</string>
+
+    <string name="actionTitle">Kill Bill</string>
+    <string name="actionDescription">A former assassin, who became bride-to-be, and mother to be, was left for dead after a massacre committed by her ex-lover and her assassin team. After being shot in the head at the end of it all, she entered a 4-year coma; and upon awaking from it, she has found that she is no longer pregnant and that her all her new friends and family from her cover life are dead. She then swore revenge and vowed to kill everyone who took part in the massacre, no matter what. Then begins a story of pain, suffering, and an unholy amount of death in hopes to complete her hit list.</string>
+    <string name="actionYear">2003-04</string>
+    <string name="actionImage">kill_bill</string>
+    <string name="actionWebLink">https://killbill.fandom.com/wiki/WiKillBill</string>
+
+    <string name="animeTitle">JoJo\'s Bizarre Adventure</string>
+    <string name="animeDescription">The story of the Joestar family, who are possessed with intense psychic strength, and the adventures each member encounters throughout their lives. Chronicles the struggles of the cursed Joestar bloodline against the forces of evil.</string>
+    <string name="animeYear">2012</string>
+    <string name="animeImage">jojo</string>
+    <string name="animeWebLink">https://jojo.fandom.com/wiki/Main_Page</string>
+
+    <string name="game1Title">The Legend of Zelda: Ocarina of Time</string>
+    <string name="game1Description">A young Hylian boy Link, must defend Hyrule and the Triforce from the Gerudo King Ganondorf. Through the power of the Ocarina of Time, Link travels back and forth through time to set things right again. Basically a prequel to all Zelda games, it shows Link\'s original life and trials before all other Zelda games.</string>
+    <string name="game1Year">1998</string>
+    <string name="game1Image">zelda_oot</string>
+    <string name="game1WebLink">https://zelda.fandom.com/wiki/The_Legend_of_Zelda:_Ocarina_of_Time</string>
+
+    <string name="game2Title">Pikmin</string>
+    <string name="game2Description">Pikmin are intelligent, loyal, multicolored, plant-animal hybrids that follow the orders of their leader. There have been multiple leaders over the course of the series, with the first and most notable being Captain Olimar, a tiny alien from the planet Hocotate introduced in the original Pikmin. In that game\'s story focuses on an alien pilot, Captain Olimar, who crash lands on a mysterious planet and must make use of a native species called "Pikmin" to find his ship\'s missing parts in order to escape within 30 days</string>
+    <string name="game2Year">2001</string>
+    <string name="game2Image">"pikmin</string>
+    <string name="game2WebLink">https://www.pikminwiki.com/</string>
+
 </resources>
