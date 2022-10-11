@@ -2,9 +2,14 @@ package com.cs315.mediamodels2022;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.DragEvent;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -45,12 +50,16 @@ public class ItemDetailFragment extends Fragment
     private ImageView mediaImageView;
     private FloatingActionButton mediaFab;
 
+    public static final String webURL = "com.cs315.mediamodels2022.M1";
+    public static final String movieTitle = "com.cs315.mediamodels2022.M2";
+
     private final View.OnDragListener dragListener = (v, event) ->
     {
         if (event.getAction() == DragEvent.ACTION_DROP)
         {
             ClipData.Item clipDataItem = event.getClipData().getItemAt(0);
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+//            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = NCMMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             updateContent();
         }
         return true;
@@ -74,10 +83,13 @@ public class ItemDetailFragment extends Fragment
         if (getArguments().containsKey(ARG_ITEM_ID))
         {
             // Load the MEDIA content specified by the fragment arguments.
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+//            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = NCMMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             // maybe set the title here?
         }
+//        getActivity().setTitle(App.getContext().getResources().getString(R.string.title_bar));
+//        ((ItemDetailHostActivity) getActivity()).setTitle(App.getContext().getResources().getString(R.string.title_bar));
     }
 
     @Override
@@ -113,15 +125,18 @@ public class ItemDetailFragment extends Fragment
 
             if (mToolbarLayout != null)
             {
-                mToolbarLayout.setTitle(mediaItem.getMediaTitle());
+//                mToolbarLayout.setTitle(mediaItem.getMediaTitle());
             }
 
             if (mediaImageView != null)
             {
-
+                int imgInt = getResources().getIdentifier("com.cs315.mediamodels2022:drawable/" + mediaItem.getMediaImage(), null, null);
+//                Drawable imgDraw = ResourcesCompat.getDrawable(getResources(), imgInt, null);
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
-
+//                mediaImageView.setImageDrawable(imgDraw);
+//                mediaImageView.setImageResource(imgInt);
+                mediaImageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), imgInt, null));
             }
 
             if (mediaFab != null)
@@ -133,8 +148,14 @@ public class ItemDetailFragment extends Fragment
                     // TODO: hint - you need to establish a new intent and launch a new Activity
                     // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
 
-                    Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    Intent intent = new Intent(getActivity(), WebPage.class);
+
+                    intent.putExtra(webURL, mediaItem.getMediaWeblink());
+                    intent.putExtra(movieTitle, mediaItem.getMediaTitle());
+
+                    startActivity(intent);
+
+//                    Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 });
             }
         }

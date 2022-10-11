@@ -12,18 +12,25 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/baloo</item>
     </style>
 
     <style name="Theme.MediaModels2022.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/baloo</item>>
     </style>
 
-    <style name="Theme.MediaModels2022.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.MediaModels2022.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:fontFamily">@font/baloo</item>
+    </style>
 
-    <style name="Theme.MediaModels2022.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.MediaModels2022.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:fontFamily">@font/baloo</item>
+    </style>
 
-    <style name="ncm_Theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="ncm_Theme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:fontFamily">@font/baloo</item>
         <!-- primary -->
         <item name="colorPrimary">@color/ncm_Orange</item>
         <item name="colorPrimaryVariant">@color/ncm_OrangeDark</item>
@@ -40,6 +47,7 @@
     </style>
 
     <style name="ncm_splashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:fontFamily">@font/baloo</item>
         <!-- primary -->
         <item name="colorPrimary">@color/ncm_Orange</item>
         <item name="colorPrimaryVariant">@color/ncm_OrangeDark</item>

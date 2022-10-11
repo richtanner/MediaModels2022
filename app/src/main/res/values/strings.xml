@@ -2,4 +2,37 @@
     <string name="app_name">MediaModels2022</string>
     <string name="title_item_detail">Item Detail</string>
     <string name="dev_name">Pumpkin Pontifex</string>
+    <string name="title_bar">Movie List</string>
+
+    <!-- movie strings -->
+    <string name="movie1_title">Tremors</string>
+    <string name="movie1_desc">Natives of a small isolated town defend themselves against strange underground creatures which are killing them one by one.</string>
+    <string name="movie1_year">1990</string>
+    <string name="movie1_image">tremors_1</string>
+    <string name="movie1_link">https://www.imdb.com/title/tt0100814/</string>
+
+    <string name="movie2_title">Tremors II: Aftershocks</string>
+    <string name="movie2_desc">Earl Bassett, now a washed-up ex-celebrity, is hired by a Mexican oil company to eradicate a Graboid epidemic that\'s killing more people each day. However, the humans aren\'t the only one with a new battle plan.</string>
+    <string name="movie2_year">1996</string>
+    <string name="movie2_image">tremors_2</string>
+    <string name="movie2_link">https://www.imdb.com/title/tt0114720/</string>
+
+    <string name="movie3_title">Tremors 3: Back to Perfection</string>
+    <string name="movie3_desc">The now famous Burt Gummer returns to his hometown of Perfection, Nevada for the first time in years, but the deadliest Graboid evolution yet forces him to save the town he swore to protect.</string>
+    <string name="movie3_year">2001</string>
+    <string name="movie3_image">tremors_3</string>
+    <string name="movie3_link">https://www.imdb.com/title/tt0259685/</string>
+
+    <string name="movie4_title">Tremors 4: The Legend Begins</string>
+    <string name="movie4_desc">A prequel to Tremors (1990), this movie tells us about how the town of Perfection, Nevada became founded and how they defended it against the Graboids with the help of Burt Gummer\'s ancestor, Hiram.</string>
+    <string name="movie4_year">2004</string>
+    <string name="movie4_image">tremors_4</string>
+    <string name="movie4_link">https://www.imdb.com/title/tt0334541/</string>
+
+    <string name="movie5_title">Tremors 5: Bloodlines</string>
+    <string name="movie5_desc">Burt and Travis battle ass-blasters and Graboids in South Africa.</string>
+    <string name="movie5_year">2015</string>
+    <string name="movie5_image">tremors_5</string>
+    <string name="movie5_link">https://www.imdb.com/title/tt4180514/</string>
+    <!-- end of movie strings -->
 </resources>

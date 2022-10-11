@@ -5,6 +5,7 @@ import android.content.ClipDescription;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -38,19 +39,17 @@ public class ItemListFragment extends Fragment
 
 
     // I am setting up my model creator... again this is called "movieMaker" only because I am doing movies!  Call yours whatever makes sense!
-    private static ProfsExampleMediaContent movieMaker = new ProfsExampleMediaContent();
+//    private static ProfsExampleMediaContent movieMaker = new ProfsExampleMediaContent();
+    private static NCMMediaContent movieMade = new NCMMediaContent();
 
     // CS315: DO THIS
     // TODO: After you create your OWN Model Creator, DELETE the reference to "ProfsExampleMediaContent" above and call your own!
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-
         binding = FragmentItemListBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
 
     @Override
@@ -75,11 +74,11 @@ public class ItemListFragment extends Fragment
     {
 
         // CS315: I am calling MY Media Creator and having it populate with the line below... obviously, change that out to YOUR thing
-        movieMaker.createMovieMagic();
+        movieMade.createMovieMagic();
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter
                 (
                 // TODO: After you create your OWN Model Creator, DELETE the reference to "movieMaker.MOVIES" below and call your own!
-                movieMaker.MOVIES,
+                movieMade.MOVIES,
                 itemDetailFragmentContainer
                 ));
     }
@@ -106,8 +105,7 @@ public class ItemListFragment extends Fragment
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
         {
-            ItemListContentBinding binding =
-                    ItemListContentBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+            ItemListContentBinding binding = ItemListContentBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
             return new ViewHolder(binding);
         }
 
@@ -125,9 +123,9 @@ public class ItemListFragment extends Fragment
                 arguments.putString(ItemDetailFragment.ARG_ITEM_ID, mediaValues.get(position).getMediaTitle());
                 if (mItemDetailFragmentContainer != null)
                 {
-                    Navigation.findNavController(mItemDetailFragmentContainer)
-                            .navigate(R.id.fragment_item_detail, arguments);
-                } else
+                    Navigation.findNavController(mItemDetailFragmentContainer).navigate(R.id.fragment_item_detail, arguments);
+                }
+                else
                 {
                     Navigation.findNavController(itemView).navigate(R.id.show_item_detail, arguments);
                 }
