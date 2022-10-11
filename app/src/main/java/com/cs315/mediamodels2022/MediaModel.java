@@ -1,5 +1,7 @@
 package com.cs315.mediamodels2022;
 
+import android.graphics.drawable.Drawable;
+
 public class MediaModel {
 
     // a generic MODEL (like a database schema) for a MEDIA object

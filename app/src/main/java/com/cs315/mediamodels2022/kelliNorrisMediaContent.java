@@ -27,31 +27,31 @@ public class kelliNorrisMediaContent {
         private static final String gameHorizonZeroDawn = "Horizon Zero Dawn: ";
         private static final String game1Description = "Girl with no parents decides to tame metal animals but she is actually a clone.";
         private static final String game1Year = "2017";
-        private static final String game1Image = "hzd.png";
+        private static final String game1Image = "hzd";
         private static final String game1Weblink = "https://www.playstation.com/en-us/games/horizon-zero-dawn/";
 
     private static final String gameKatanaZero = "Katana Zero: ";
     private static final String game2Description = "Man on drugs can see through multiple dimensions and uses his powers to kill all the bad guys.";
     private static final String game2Year = "2019";
-    private static final String game2Image = "ktz.png";
+    private static final String game2Image = "ktz";
     private static final String game2Weblink = "https://katanazero.com/";
 
     private static final String gameBreathOfTheWild = "Breath of the Wild: ";
     private static final String game3Description = "Man wakes up from taking a 100yr bath, and an invisible lady tells him he's gotta fight some people";
     private static final String game3Year = "2017";
-    private static final String game3Image = "botw.png";
+    private static final String game3Image = "botw";
     private static final String game3Weblink = "https://www.zelda.com/breath-of-the-wild/";
 
     private static final String gameWitchIt = "Witch It: ";
     private static final String game4Description = "Witches being hunted by potato farmers. ";
     private static final String game4Year = "2017";
-    private static final String game4Image = "wi.png";
+    private static final String game4Image = "wi";
     private static final String game4Weblink = "https://barrelrollgames.com/games/";
 
     private static final String gameSuperSmashBrothers = "Super Smash Brothers: ";
     private static final String game5Description = "calculated violence";
     private static final String game5Year = "2001";
-    private static final String game5Image = "ssb.png";
+    private static final String game5Image = "ssb";
     private static final String game5Weblink = "https://www.smashbros.com/en_US/";
 
 

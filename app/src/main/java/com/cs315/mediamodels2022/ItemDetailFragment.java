@@ -2,6 +2,7 @@ package com.cs315.mediamodels2022;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,11 +45,13 @@ public class ItemDetailFragment extends Fragment {
     private TextView mediaDetailTextView;
     private ImageView mediaImageView;
     private FloatingActionButton mediaFab;
+    private String url = "";
+    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     private final View.OnDragListener dragListener = (v, event) -> {
         if (event.getAction() == DragEvent.ACTION_DROP) {
             ClipData.Item clipDataItem = event.getClipData().getItemAt(0);
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = kelliNorrisMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             updateContent();
         }
         return true;
@@ -67,7 +71,7 @@ public class ItemDetailFragment extends Fragment {
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the MEDIA content specified by the fragment arguments.
-            mediaItem = ProfsExampleMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mediaItem = kelliNorrisMediaContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             // maybe set the title here?
         }
@@ -97,6 +101,8 @@ public class ItemDetailFragment extends Fragment {
         binding = null;
     }
 
+
+
     private void updateContent()
     {
         if (mediaItem != null)
@@ -110,20 +116,34 @@ public class ItemDetailFragment extends Fragment {
 
             if (mediaImageView != null)
             {
-
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
+                // mediaImageView.setImageDrawable(mediaItem.getMediaImage().toString());
+                int imageID = getResources().getIdentifier(mediaItem.getMediaImage(), "drawable", getContext().getPackageName());
+                mediaImageView.setImageResource(imageID);
+
 
             }
 
             if (mediaFab != null)
             {
+
+
                 mediaFab.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view)
                     {
+                        // CS315: DO THIs
+                        //GaMEs.add(game);
+                       // ITEM_MAP.put(game.getMediaTitle(), game);
 
-                        // CS315: DO THIS
+
+
+                        Intent intent = new Intent(ItemDetailFragment.super.getActivity(),WebActivity.class);
+                        String url = mediaItem.getMediaWeblink();
+                        intent.putExtra(EXTRA_MESSAGE, url);
+                        startActivity(intent);
+
                         // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                         // TODO: hint - you need to establish a new intent and launch a new Activity
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!

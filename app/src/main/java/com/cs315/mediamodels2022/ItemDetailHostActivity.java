@@ -22,6 +22,7 @@ public class ItemDetailHostActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //here? error
 
         ActivityItemDetailBinding binding = ActivityItemDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
