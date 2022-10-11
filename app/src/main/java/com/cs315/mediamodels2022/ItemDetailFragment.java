@@ -2,6 +2,7 @@ package com.cs315.mediamodels2022;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 
@@ -33,6 +34,7 @@ public class ItemDetailFragment extends Fragment {
      * We used the MediaTitle as our ID.
      */
     public static final String ARG_ITEM_ID = "item_id";
+    public static final String URLSENDEY = "https://isitchristmas.com/";
 
     /**
      * The Movie content this fragment is presenting.
@@ -122,6 +124,10 @@ public class ItemDetailFragment extends Fragment {
                     @Override
                     public void onClick(View view)
                     {
+                        Intent intent = new Intent(ItemDetailFragment.super.getActivity(), WebActivity.class);
+                        String url = mediaItem.getMediaWeblink();
+                        intent.putExtra(URLSENDEY, url);
+                        startActivity(intent);
 
                         // CS315: DO THIS
                         // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
