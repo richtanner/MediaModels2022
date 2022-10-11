@@ -114,8 +114,8 @@ public class ItemListFragment extends Fragment {
                 } else {
                     Navigation.findNavController(itemView).navigate(R.id.show_item_detail, arguments);
                 }
+                clear();
             });
-
         }
 
         @Override
@@ -137,6 +137,12 @@ public class ItemListFragment extends Fragment {
                 mImageView = binding.image;
                 mDescription = binding.description;
             }
+        }
+
+        public void clear() {
+            int size = mediaValues.size();
+            mediaValues.clear();
+            notifyItemRangeRemoved(0, size);
         }
     }
 }
