@@ -4,21 +4,26 @@
     <string name="game1">Ultrakill</string>
     <string name="description1">I wouldn\’t exactly say shooter games are my favorite genre, but \‘boomer shooters\’ generally do better for me than normal. That being said, ULTRAKILL is very good. It\’s very fast paced, very action-packed, all style, all substance. Very good. It is about as violent as the name sounds. Your character, a robot venturing into hell to sustain itself after humanity has gone extinct, refuels by soaking in the blood of the enemies in the game. which. speaks for itself. Look up devilmayquake.com and see where it takes you. Actually no, just click the link, that probably works better.</string>
     <string name="year1">2020</string>
+    <string name="image1">game1image</string>
     <string name="link1">https://store.steampowered.com/app/1229490/ULTRAKILL/</string>
     <string name="game2">Splatoon 3</string>
     <string name="description2">I realize I just said in the last entry that shooters aren\’t my favorite genre, but. Splatoon 3 is very good. I didn\’t expect it to be that big of a step up from 2, but it has so much more visual flare, so many balance things, much more interesting story mode, tons of quality of life changes, and much more. Most importantly, it actually has servers that work well, (i know, that’s heresy for nintendo games) so I can actually play with friends on the college wifi. Good times.</string>
     <string name="year2">2022</string>
+    <string name="image2">game2image</string>
     <string name="link2">https://splatoon.nintendo.com/</string>
     <string name="game3">Terraria</string>
     <string name="description3">It feels redundant to say I\'ve been playing Terraria recently, given I\'ve just. Always been playing Terraria. It\'s the first game I ever owned on steam. I\'ve bought it 3 times, on two different steam accounts and also on Switch. My steam page lists 1300 hours, and honestly there\'s probably more that on other versions. It\'s very good. Favorite game. They recently released the last last last update since they won the Labor of Love award last year, and it adds so much polish and cool things. It\'s very good. Play it.</string>
     <string name="year3">2011</string>
+    <string name="image3">game3image</string>
     <string name="link3">https://store.steampowered.com/app/105600/Terraria/</string>
     <string name="game4">Team Fortress 2</string>
-    <string name="description4">Man, I play more shooter games than I thought. I remember people going nuts when this game turned 10 like it was yesterday, and it\'s 5 years younger than me. It turned 10 in 2017. It is 15 years old now. I do not want to think about this fact. Game\'s good though! Very good class-based shootey times. People have compared it to Overwatch a frankly upsetting amount, which I somewhat see? But honestly, despite Overwatch being much cleaner by today\'s standards, I still very much prefer TF2. It just has so much more character and charm. Very good.</string>
+    <string name="description4">Man, I play more shooter games than I thought. I remember people going nuts when this game turned 10 like it was yesterday, and it\'s 5 years younger than me. It turned 10 in 2017. It is 15 years old now. I do not want to think about this fact. Game\'s good though! Very good class-based shootey times. People have compared it to Overwatch a frankly upsetting amount, which I somewhat see? But honestly, despite Overwatch being much cleaner by today\'s standards, I still very much prefer TF2. It just has so much more character and charm. Very good. Also, I just realized, it\'s birthday is October 10\'th. It just turned 15 the night I\'m working on this. Neat!</string>
     <string name="year4">2007</string>
+    <string name="image4">game4image</string>
     <string name="link4">https://store.steampowered.com/app/440/Team_Fortress_2/</string>
     <string name="game5">Bleed 2</string>
     <string name="description5">Do not be alarmed! There is very little, if any, bleeding in this game. It\'s a sequel to Bleed, which admittedly does contain much more bleeding. It\'s a side-scrolling, shoot-em-up bullet hell, where you have both a katana and two pistols to reflect projectiles and shoot the baddies. There is not a concept of down time in this game. You ping-pong between level and bosses so fast, respawn very quick after the protagonist makes quips at the enemy, and even between levels there\'s just quick plot cutscene on the news and then BOOM more action. Very good game.</string>
     <string name="year5">2017</string>
+    <string name="image5">game5image</string>
     <string name="link5">https://store.steampowered.com/app/396350/Bleed_2/</string>
 </resources>

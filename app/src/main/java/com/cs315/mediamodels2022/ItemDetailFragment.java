@@ -113,8 +113,10 @@ public class ItemDetailFragment extends Fragment {
             if (mediaImageView != null)
             {
 
-                // CS315: DO THIS
-                // TODO: Set the image based upon the string we got stashed in getMovieImage()
+                String imageName = mediaItem.getMediaImage();
+                //fix this
+                int imageId = getResources().getIdentifier(mediaItem.getMediaImage(), "drawable", getContext().getPackageName());
+                mediaImageView.setImageResource(imageId);
 
             }
 
@@ -124,18 +126,13 @@ public class ItemDetailFragment extends Fragment {
                     @Override
                     public void onClick(View view)
                     {
+                        Snackbar.make(view, "Loading web link", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+
                         Intent intent = new Intent(ItemDetailFragment.super.getActivity(), WebActivity.class);
                         String url = mediaItem.getMediaWeblink();
                         intent.putExtra(URLSENDEY, url);
                         startActivity(intent);
-
-                        // CS315: DO THIS
-                        // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
-                        // TODO: hint - you need to establish a new intent and launch a new Activity
-                        // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
-
-                        Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
                     }
                 });
             }

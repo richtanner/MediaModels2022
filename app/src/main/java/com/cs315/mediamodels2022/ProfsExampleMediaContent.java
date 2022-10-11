@@ -27,31 +27,31 @@ public class ProfsExampleMediaContent {
     private static final String game1 = App.getContext().getResources().getString(R.string.game1);
     private static final String description1 = App.getContext().getResources().getString(R.string.description1);
     private static final String year1 = App.getContext().getResources().getString(R.string.year1);
-    private static final String image1 = "genericromcom";
+    private static final String image1 = App.getContext().getResources().getString(R.string.image1);
     private static final String link1 = App.getContext().getResources().getString(R.string.link1);
 
     private static final String game2 = App.getContext().getResources().getString(R.string.game2);
     private static final String description2 = App.getContext().getResources().getString(R.string.description2);
     private static final String year2 = App.getContext().getResources().getString(R.string.year2);
-    private static final String image2 = "genericromcom";
+    private static final String image2 = App.getContext().getResources().getString(R.string.image2);
     private static final String link2 = App.getContext().getResources().getString(R.string.link2);
 
     private static final String game3 = App.getContext().getResources().getString(R.string.game3);
     private static final String description3 = App.getContext().getResources().getString(R.string.description3);
     private static final String year3 = App.getContext().getResources().getString(R.string.year3);
-    private static final String image3 = "genericromcom";
+    private static final String image3 = App.getContext().getResources().getString(R.string.image3);
     private static final String link3 = App.getContext().getResources().getString(R.string.link3);
 
     private static final String game4 = App.getContext().getResources().getString(R.string.game4);
     private static final String description4 = App.getContext().getResources().getString(R.string.description4);
     private static final String year4 = App.getContext().getResources().getString(R.string.year4);
-    private static final String image4 = "genericromcom";
+    private static final String image4 = App.getContext().getResources().getString(R.string.image4);
     private static final String link4 = App.getContext().getResources().getString(R.string.link4);
 
     private static final String game5 = App.getContext().getResources().getString(R.string.game5);
     private static final String description5 = App.getContext().getResources().getString(R.string.description5);
     private static final String year5 = App.getContext().getResources().getString(R.string.year5);
-    private static final String image5 = "genericromcom";
+    private static final String image5 = App.getContext().getResources().getString(R.string.image5);
     private static final String link5 = App.getContext().getResources().getString(R.string.link5);
 
 
@@ -67,6 +67,7 @@ public class ProfsExampleMediaContent {
         MediaModel model4 = new MediaModel(game4, description4, year4, image4, link4);
         MediaModel model5 = new MediaModel(game5, description5, year5, image5, link5);
 
+        MOVIES.clear();
         // add EACH movie object to our lists and maps
         addMovieToList(model1);
         addMovieToList(model2);
