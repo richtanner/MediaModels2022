@@ -1,4 +1,34 @@
 <resources>
     <string name="app_name">MediaModels2022</string>
     <string name="title_item_detail">Item Detail</string>
+
+    <string name="game1Title">Drawn To Life</string>
+    <string name="game1Description">A village has fallen into ruin, and everyone is leaving as the darkness creeps in. The daughter of the mayor calls out to the Creator to save them, and he offers them a hero to save them from the evil Wilfre. He saves all of the citizens who ran away and defeats Wilfre with the help of the Creator drawing different items to help the hero navigate through the levels</string>
+    <string name="game1Year">2007</string>
+    <string name="game1Image">drawn_to_life</string>
+    <string name="game1WebLink">https://drawntolife.wiki/en/Drawn_to_Life</string>
+
+    <string name="game2Title">Mario and Luigi: Bowser\'s Inside Story</string>
+    <string name="game2Description">A turn based RPG in the Mario and Luigi series where the brothers have to team up with Bowser. After being inhaled by him, the bros navigate inside of Bowser while Bowser himself navigates the overworld. If Bowser is ever in need of assistance, the brothers can help him out by stimulating muscles, striking nerves, and fixing up Bowser\'s body to give him new abilities.</string>
+    <string name="game2Year">2009</string>
+    <string name="game2Image">bowsers_inside_story</string>
+    <string name="game2WebLink">https://www.mariowiki.com/Mario_%26_Luigi:_Bowser%27s_Inside_Story</string>
+
+    <string name="game3Title">Professor Layton Vs Phoenix Wright: Ace Attorney</string>
+    <string name="game3Description">A crossover between the Professor Layton and Phoenix Wright game franchises, featuring investigation sequences that lean more into the Professor Layton puzzle solving genre and trial sequences that take from the Phoenix Wright games. The main mystery of the game is about a mysterious medieval town called Laberyinthia</string>
+    <string name="game3Year">2012</string>
+    <string name="game3Image">professor_layton_vs_phoenix_wright</string>
+    <string name="game3WebLink">https://en.wikipedia.org/wiki/Professor_Layton_vs._Phoenix_Wright:_Ace_Attorney</string>
+
+    <string name="game4Title">The Legendary Starfy</string>
+    <string name="game4Description">An underwater adventure about a starfish named Starfy, this platformer is often likened to an underwater Kirby game with it\'s interesting powerups and fun boss fights</string>
+    <string name="game4Year">2008</string>
+    <string name="game4Image">the_legendary_starfy</string>
+    <string name="game4WebLink">https://en.wikipedia.org/wiki/The_Legendary_Starfy_(video_game)</string>
+
+    <string name="game5Title">Wario: Master of Disguise</string>
+    <string name="game5Description">An action platformer staring everyone\'s favorite thief, Wario. Use the stylis to draw disguises on Wario to grant him different abilities, and try to get as much treasure as you can, and maybe also stop a demon lord while you\'re at it.</string>
+    <string name="game5Year">2007</string>
+    <string name="game5Image">"wario_master_of_disguise</string>
+    <string name="game5WebLink">https://www.mariowiki.com/Wario:_Master_of_Disguise</string>
 </resources>

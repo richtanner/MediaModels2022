@@ -1,5 +1,8 @@
 package com.cs315.mediamodels2022;
 
+import android.content.Context;
+import android.content.res.Resources;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,37 +26,38 @@ public class BenjiBlackmonsMediaContent
      * Create all those movie Strings we will be needing for the models
      */
     // CS315: DO THIS
-    // TODO: COPY this class to create your OWN MediaContent.  Then, create five NEW media objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
+    Context context = App.getContext();
+    Resources res = context.getResources();
 
-    private static final String game1Title = "Drawn To Life";
-    private static final String game1Description = "A village has fallen into ruin, and everyone is leaving as the darkness creeps in. The daughter of the mayor calls out to the Creator to save them, and he offers them a hero to save them from the evil Wilfre. He saves all of the citizens who ran away and defeats Wilfre with the help of the Creator drawing different items to help the hero navigate through the levels";
-    private static final String game1Year = "2007";
-    private static final String game1Image = "drawn_to_life.png";//TODO: Find image
-    private static final String game1Weblink = "https://drawntolife.wiki/en/Drawn_to_Life";
+    private String game1Title = res.getString(R.string.game1Title);
+    private String game1Description = res.getString(R.string.game1Description);
+    private String game1Year = res.getString(R.string.game1Year);
+    private String game1Image = res.getString(R.string.game1Image);//TODO: Find image
+    private String game1Weblink = res.getString(R.string.game1WebLink);
 
-    private static final String game2Title = "Mario & Luigi: Bowser's Inside Story";
-    private static final String game2Description = "A turn based RPG in the Mario and Luigi series where the brothers have to team up with Bowser. After being inhaled by him, the bros navigate inside of Bowser while Bowser himself navigates the overworld. If Bowser is ever in need of assistance, the brothers can help him out by stimulating muscles, striking nerves, and fixing up Bowser's body to give him new abilities.";
-    private static final String game2Year = "2009";
-    private static final String game2Image = "bowsers_inside_story.png";//TODO: Find image
-    private static final String game2Weblink = "https://www.mariowiki.com/Mario_%26_Luigi:_Bowser%27s_Inside_Story";
+    private String game2Title = res.getString(R.string.game2Title);
+    private String game2Description = res.getString(R.string.game2Description);
+    private String game2Year = res.getString(R.string.game2Year);
+    private String game2Image = res.getString(R.string.game2Image);//TODO: Find image
+    private String game2Weblink = res.getString(R.string.game2WebLink);
 
-    private static final String game3Title = "Professor Layton Vs Phoenix Wright: Ace Attorney";
-    private static final String game3Description = "A crossover between the Professor Layton and Phoenix Wright game franchises, featuring investigation sequences that lean more into the Professor Layton puzzle solving genre and trial sequences that take from the Phoenix Wright games. The main mystery of the game is about a mysterious medieval town called Laberyinthia";
-    private static final String game3Year = "2012";
-    private static final String game3Image = "professor_layton_vs_phoenix_wright.png";//TODO: Find image
-    private static final String game3Weblink = "https://en.wikipedia.org/wiki/Professor_Layton_vs._Phoenix_Wright:_Ace_Attorney";
+    private String game3Title = res.getString(R.string.game3Title);
+    private String game3Description = res.getString(R.string.game3Description);
+    private String game3Year = res.getString(R.string.game3Year);
+    private String game3Image = res.getString(R.string.game3Image);//TODO: Find image
+    private String game3Weblink = res.getString(R.string.game3WebLink);
 
-    private static final String game4Title = "The Legendary Starfy";
-    private static final String game4Description = "An underwater adventure about a starfish named Starfy, this platformer is often likened to an underwater Kirby game with it's interesting powerups and fun boss fights";
-    private static final String game4Year = "2008";
-    private static final String game4Image = "the_legendary_starfy.png";//TODO: Find image
-    private static final String game4Weblink = "https://en.wikipedia.org/wiki/The_Legendary_Starfy_(video_game)";
+    private String game4Title = res.getString(R.string.game4Title);
+    private String game4Description = res.getString(R.string.game4Description);
+    private String game4Year = res.getString(R.string.game4Year);
+    private String game4Image = res.getString(R.string.game4Image);//TODO: Find image
+    private String game4Weblink = res.getString(R.string.game4WebLink);
 
-    private static final String game5Title = "Wario: Master of Disguise";
-    private static final String game5Description = "An action platformer staring everyone's favorite thief, Wario. Use the stylis to draw disguises on Wario to grant him different abilities, and try to get as much treasure as you can, and maybe also stop a demon lord while you're at it.";
-    private static final String game5Year = "2007";
-    private static final String game5Image = "wario_master_of_disguise.png";//TODO: Find image
-    private static final String game5Weblink = "https://www.mariowiki.com/Wario:_Master_of_Disguise";
+    private String game5Title = res.getString(R.string.game5Title);
+    private String game5Description = res.getString(R.string.game5Description);
+    private String game5Year = res.getString(R.string.game5Year);
+    private String game5Image = res.getString(R.string.game5Image);//TODO: Find image
+    private String game5Weblink = res.getString(R.string.game5WebLink);
 
 
     /**
@@ -69,6 +73,7 @@ public class BenjiBlackmonsMediaContent
         MediaModel game4 = new MediaModel(game4Title, game4Description, game4Year, game4Image, game4Weblink);
         MediaModel game5 = new MediaModel(game5Title, game5Description, game5Year, game5Image, game5Weblink);
 
+        GAMES.clear();
         // add EACH movie object to our lists and maps
         addGameToList(game1);
         addGameToList(game2);
