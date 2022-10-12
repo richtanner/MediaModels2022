@@ -20,12 +20,12 @@ public class MarlonMillerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_marlon_miller);
 
         Intent intent = getIntent();
-        String link = intent.getStringExtra(ItemDetailFragment.URL);
+        String url = intent.getStringExtra(ItemDetailFragment.URL);
 
         WebView webView = findViewById(R.id.marlon_miller_webview);
         webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        webView.loadUrl(link);
+        webView.loadUrl(url);
     }
 }
