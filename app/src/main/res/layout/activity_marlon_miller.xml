@@ -6,10 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MarlonMillerActivity">
 
+<!--    <ProgressBar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        style="@style/Base.CardView"-->
+<!--        android:id="@+id/pb"/>-->
     <WebView
         android:id="@+id/marlon_miller_webview"
         android:layout_width="409dp"
         android:layout_height="729dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

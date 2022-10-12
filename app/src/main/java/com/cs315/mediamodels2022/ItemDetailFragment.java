@@ -25,7 +25,7 @@ import com.google.android.material.snackbar.Snackbar;
  * in two-pane mode (on larger screen devices) or self-contained
  * on handsets.
  */
-public class ItemDetailFragment extends Fragment {
+public class ItemDetailFragment extends Fragment implements View.OnClickListener {
 
     /**
      * The fragment argument representing the item ID that this fragment
@@ -69,6 +69,7 @@ public class ItemDetailFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        assert getArguments() != null;
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the MEDIA content specified by the fragment arguments.
             mediaItem = MarlonMillerMediaContent.MM_MAP.get(getArguments().getString(ARG_ITEM_ID));
@@ -125,24 +126,30 @@ public class ItemDetailFragment extends Fragment {
 
             if (mediaFab != null)
             {
-                mediaFab.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view)
-                    {
-
-                        // CS315: DO THIS
-                        // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
-                        // TODO: hint - you need to establish a new intent and launch a new Activity
-                        // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
-
-                        Intent intent = new Intent(getActivity(), MarlonMillerActivity.class);
-                        intent.putExtra(link,mediaItem.getMediaWeblink());
-                        startActivity(intent);
-                        //Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
-                        //        .setAction("Action", null).show();
-                    }
-                });
+                mediaFab.setOnClickListener(this);
+//                mediaFab.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view)
+//                    {
+//
+//                        // CS315: DO THIS
+//                        // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
+//                        // TODO: hint - you need to establish a new intent and launch a new Activity
+//                        // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
+//
+//
+//                        //Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
+//                        //        .setAction("Action", null).show();
+//                    }
+//                });
             }
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(getActivity(), MarlonMillerActivity.class);
+        intent.putExtra(link,mediaItem.getMediaWeblink());
+        startActivity(intent);
     }
 }
