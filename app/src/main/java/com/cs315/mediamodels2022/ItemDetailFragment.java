@@ -137,9 +137,9 @@ public class ItemDetailFragment extends Fragment { // implements View.OnClickLis
                         // TODO: hint - you need to establish a new intent and launch a new Activity
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
 
-//                        Intent intent = new Intent(ItemDetailFragment.super.getActivity(), MarlonMillerActivity.class);
-//                        intent.putExtra(link,mediaItem.getMediaWeblink());
-//                        startActivity(intent);
+                        Intent intent = new Intent(ItemDetailFragment.super.getActivity(), MarlonMillerActivity.class);
+                        intent.putExtra(link,mediaItem.getMediaWeblink());
+                        startActivity(intent);
                         Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     }
