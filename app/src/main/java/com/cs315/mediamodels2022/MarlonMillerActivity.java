@@ -19,29 +19,13 @@ public class MarlonMillerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marlon_miller);
 
+        Intent intent = getIntent();
+        String link = intent.getStringExtra(ItemDetailFragment.link);
 
         WebView webView = findViewById(R.id.marlon_miller_webview);
         webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        Intent intent = getIntent();
-        String link = intent.getStringExtra(ItemDetailFragment.link);
-
-        //webView.loadUrl(link);
-//        webView.setWebViewClient(new WebViewClient() {
-//
-//            @Override
-//            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-//                super.onPageStarted(view, url, favicon);
-//                findViewById(R.id.alexb_webview_progressbar).setVisibility(View.VISIBLE);
-//            }
-//
-//            @Override
-//            public void onPageFinished(WebView view, String url) {
-//                super.onPageFinished(view, url);
-//                findViewById(R.id.alexb_webview_progressbar).setVisibility(View.GONE);
-//                webView.setVisibility(View.VISIBLE);
-//            }
-//        });
+        webView.loadUrl(link);
     }
 }
