@@ -20,7 +20,7 @@ public class MarlonMillerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_marlon_miller);
 
         Intent intent = getIntent();
-        String link = intent.getStringExtra(ItemDetailFragment.link);
+        String link = intent.getStringExtra(ItemDetailFragment.URL);
 
         WebView webView = findViewById(R.id.marlon_miller_webview);
         webSettings = webView.getSettings();

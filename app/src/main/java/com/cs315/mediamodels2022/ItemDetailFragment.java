@@ -34,7 +34,7 @@ public class ItemDetailFragment extends Fragment { // implements View.OnClickLis
      * We used the MediaTitle as our ID.
      */
     public static final String ARG_ITEM_ID = "item_id";
-    public static final String link = null;
+    public static final String URL = null;
     /**
      * The Movie content this fragment is presenting.
      */
@@ -138,7 +138,7 @@ public class ItemDetailFragment extends Fragment { // implements View.OnClickLis
                         // TODO: also, make sure you have a ProgressBar on your WebView, so users know you are loading something!
 
                         Intent intent = new Intent(ItemDetailFragment.super.getActivity(), MarlonMillerActivity.class);
-                        intent.putExtra(link,mediaItem.getMediaWeblink());
+                        intent.putExtra(URL,mediaItem.getMediaWeblink());
                         startActivity(intent);
                         Snackbar.make(view, "Make this button launch a NEW Activity with a WebView in it!  ... and change the icon!", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
