@@ -3,4 +3,23 @@
     <string name="title_item_detail">Item Detail</string>
 
     <string name="My_Hero_Academia">My Hero Academia</string>
+    <string name="heroDes">My Hero Academia is a Japanese superhero manga series written and illustrated by Kōhei Horikoshi. It has been serialized in Shueisha\'s shōnen manga magazine Weekly Shōnen Jump since July 2014, with its chapters additionally collected into 36 tankōbon volumes as of October 2022\"</string>
+    <string name="heroYear">2014</string>
+    <string name="heroURL">https://beta.crunchyroll.com/series/G6NQ5DWZ6/my-hero-academia</string>
+    <string name="minetitle">Minecraft</string>
+    <string name="mineDes">You better vote for the dang sniffer</string>
+    <string name="mineYear">2011</string>
+    <string name="mineURL">https://www.minecraft.net/en-us</string>
+    <string name="eldarn">Elden Ring</string>
+    <string name="eldarnDes">A beautiful game full of sadness, epic adventures, and some amazing weapons...</string>
+    <string name="eldarnYear">2022</string>
+    <string name="eldarnURL">https://store.steampowered.com/app/1245620/ELDEN_RING/</string>
+    <string name="ter">Terraria</string>
+    <string name="terDes">Like minecraft but 2d</string>
+    <string name="terYear">2011</string>
+    <string name="terURL">https://terraria.org/</string>
+    <string name="teen">Teen Titans</string>
+    <string name="teenDes">Best show of 2005</string>
+    <string name="teenYear">2005</string>
+    <string name="teenURL">https://en.wikipedia.org/wiki/Teen_Titans_(TV_series)</string>
 </resources>

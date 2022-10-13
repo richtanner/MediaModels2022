@@ -37,7 +37,7 @@ public class ItemListFragment extends Fragment {
 
 
     // I am setting up my model creator... again this is called "movieMaker" only because I am doing movies!  Call yours whatever makes sense!
-    private static ProfsExampleMediaContent movieMaker = new ProfsExampleMediaContent();
+    private static MDogContent movieMaker = new MDogContent();
 
     // CS315: DO THIS
     // TODO: After you create your OWN Model Creator, DELETE the reference to "ProfsExampleMediaContent" above and call your own!
@@ -105,6 +105,12 @@ public class ItemListFragment extends Fragment {
 
         }
 
+        public void clear() {
+            int size = mediaValues.size();
+            mediaValues.clear();
+            notifyItemRangeRemoved(0, size);
+        }
+
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.mediaItem = mediaValues.get(position);
@@ -121,7 +127,8 @@ public class ItemListFragment extends Fragment {
                 } else {
                     Navigation.findNavController(itemView).navigate(R.id.show_item_detail, arguments);
                 }
-            });
+                clear(); });
+            ;
         }
 
         @Override
