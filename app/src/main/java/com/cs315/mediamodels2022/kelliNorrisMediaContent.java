@@ -67,6 +67,7 @@ public class kelliNorrisMediaContent {
             MediaModel wi = new MediaModel(gameWitchIt, game4Description, game4Year, game4Image, game4Weblink);
             MediaModel ssb = new MediaModel(gameSuperSmashBrothers, game5Description, game5Year, game5Image, game5Weblink);
 
+            GaMEs.clear();
             // add EACH movie object to our lists and maps
             addMovieToList(hzd);
             addMovieToList(ktz);
